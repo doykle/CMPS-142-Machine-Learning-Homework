@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{fullpage,mathpazo,amsfonts,nicefrac,amsmath}
+\usepackage{fullpage,mathpazo,amsfonts,nicefrac,amsmath,amsthm}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -26,7 +26,19 @@
   	\item[(c)] $\theta = (4.3608, -0.1343, 1.8477, -0.8966)$ 
   	\item[(d)] As long as each instance $i$, $x^{(i)}$, has the same row index as the corresponding $y^{(i)}$, the data will be the same, and so the resulting regression model will be the same. 
   	\end{enumerate}
-  \item Problem ...
+  \item To prove $ w \cdot x = \ln\big(\frac{p(1\mid x,w)}{p(0\mid x,w)}\big) $ we will simplify $\ln\big(\frac{p(1\mid x,w)}{p(0\mid x,w)}\big)$ and demonstrate the equality.
+  
+   \begin{proof}We were given $p(1\mid x,w) =\frac{e^{w \cdot x}}{1 + e^{w \cdot x}}$ and $p(0\mid x,w) = 1 - p(1\mid x,w)$. From this we can find that 
+    
+	\begin{align*}
+	\begin{split}
+	p(0\mid x,w) &= 1 - p(1\mid x,w) \\
+	&= 1 - \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \\
+	\end{split}
+	\end{align*}
+   
+  
+   \end{proof}
 \end{enumerate}
 
 \end{document}
