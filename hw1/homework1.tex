@@ -26,7 +26,7 @@
   	\item[(c)] $\theta = (4.3608, -0.1343, 1.8477, -0.8966)$ 
   	\item[(d)] As long as each instance $i$, $x^{(i)}$, has the same row index as the corresponding $y^{(i)}$, the data will be the same, and so the resulting regression model will be the same. 
   	\end{enumerate}
-  \item To prove $ w \cdot x = \ln\big(\frac{p(1\mid x,w)}{p(0\mid x,w)}\big) $ we will simplify $\ln\big(\frac{p(1\mid x,w)}{p(0\mid x,w)}\big)$ and demonstrate the equality.
+  \item To prove $ w \cdot x = \ln\left( \frac{p(1\mid x,w)}{p(0\mid x,w)}\right)  $ we will simplify $\ln\left( \frac{p(1\mid x,w)}{p(0\mid x,w)}\right) $ and demonstrate the equality.
   
    \begin{proof}We were given $p(1\mid x,w) =\frac{e^{w \cdot x}}{1 + e^{w \cdot x}}$ and $p(0\mid x,w) = 1 - p(1\mid x,w)$. From this we can find that 
     
@@ -34,9 +34,26 @@
 	\begin{split}
 	p(0\mid x,w) &= 1 - p(1\mid x,w) \\
 	&= 1 - \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \\
+	&= \frac{1 + e^{w \cdot x}}{1 + e^{w \cdot x}} - \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \\
+	&= \frac{1 + e^{w \cdot x} - e^{w \cdot x}}{1 + e^{w \cdot x}} \\
+	&= \frac{1}{1 + e^{w \cdot x}} .
 	\end{split}
 	\end{align*}
    
+   Now that we have expressions for $p(1\mid x,w)$ and $p(0\mid x,w)$, we can substitute them into
+   
+   	\begin{align*}
+   	\begin{split}
+   	\ln\left(\frac{p(1\mid x,w)}{p(0\mid x,w)}\right) &= \ln \left( \frac{\frac{e^{w \cdot x}}{1 + e^{w \cdot x}}}{\frac{1}{1 + e^{w \cdot x}}} \right)  \\
+   	&= \ln \left( \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \right) - \ln \left( \frac{1}{1 + e^{w \cdot x}} \right) \\
+   	&= \Big[ \ln \left( e^{w \cdot x} \right) - \ln \left( 1 + e^{w \cdot x} \right)  \Big] - \Big[ \ln \left( 1 \right) - \ln \left( 1 + e^{w \cdot x} \right)   \Big] \\
+   	&= \ln \left( e^{w \cdot x} \right) - \ln \left( 1 + e^{w \cdot x} \right) + \ln \left( 1 + e^{w \cdot x} \right) \\
+   	&= \ln \left( e^{w \cdot x} \right) \\
+   	&= w \cdot x
+   	\end{split}
+   	\end{align*}
+   
+   which is what we intended to prove.
   
    \end{proof}
 \end{enumerate}
