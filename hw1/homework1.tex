@@ -114,8 +114,8 @@
    &= \frac{1}{2} \nabla_\theta \Tr \left( \theta^TX^TX\theta - \theta^TX^T\vec{y} - \vec{y}^TX\theta + \vec{y}^T\vec{y} + \theta^T\theta \right) \\
    &= \frac{1}{2} \nabla_\theta \left( \Tr(\theta^TX^TX\theta) - \Tr( \theta^TX^T\vec{y}) - \Tr(\vec{y}^TX\theta) + \Tr(\vec{y}^T\vec{y}) + \Tr(\theta^T\theta) \right) \\
    &= \frac{1}{2} \nabla_\theta \left( \Tr(\theta^TX^TX\theta) - 2\Tr(\vec{y}^TX\theta) + \Tr(\vec{y}^T\vec{y}) + \Tr(\theta^T\theta) \right) \\
-   &= \frac{1}{2} \left( X^TX\theta + X^TX\theta - 2X^T\vec{y} - 2\theta \right)  \\
-   &= X^TX\theta - X^T\vec{y} - \theta
+   &= \frac{1}{2} \left( X^TX\theta + X^TX\theta - 2X^T\vec{y} + 2\theta \right)  \\
+   &= X^TX\theta - X^T\vec{y} + \theta
    \end{align}
    
   \small [ Notes: (4) the trace of a real number is the real number. (6) $\Tr(A) = \Tr(A^T)$. (7.1) $\nabla_{A^T} \Tr (ABA^TC) = B^TA^TC^T + BA^TC$. (7.2) $\nabla_x\Tr(x^TAx) = 2Ax.$
@@ -123,7 +123,15 @@
   
   Now, to minimize $J_R$ we set $\nabla_\theta J_R$ equal to zero and solve for $\theta$:
   
+  \begin{align*}
+  X^TX\theta - X^T\vec{y} + \theta &= 0 &\Longleftrightarrow \\
+  X^TX\theta + \theta &=  X^T\vec{y} &\Longleftrightarrow \\
+  (X^TX + 1)\theta &=  X^T\vec{y} &\Longleftrightarrow \\
+  (X^TX + 1)^{-1}(X^TX + 1)\theta &=  (X^TX + 1)^{-1}X^T\vec{y} &\Longleftrightarrow \\
+  \theta &=  (X^TX + 1)^{-1}X^T\vec{y} & 
+  \end{align*}
   
+  So, the value of $\theta$ that minimizes $J_R(\theta)$ is given in closed form by the equation \[\theta =  (X^TX + 1)^{-1}X^T\vec{y}.\]
 \end{enumerate}
 
 \end{document}
