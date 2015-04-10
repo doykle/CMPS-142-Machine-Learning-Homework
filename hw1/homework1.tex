@@ -1,10 +1,14 @@
 \documentclass[12pt]{article}
 \usepackage{fullpage,mathpazo,amsfonts,nicefrac,amsmath,amsthm}
 
+\newtheorem{fact}{Fact}
+\newtheorem*{lemma}{Lemma}
+
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\Tr}{tr}
 
 \begin{document}
 
@@ -17,7 +21,51 @@
 \end{tabular}
     
 \begin{enumerate}
-  \item We will prove that for an arbitrary number of examples $m$, and number of features $n$, that the Least Sqares cost function $J(\theta)$ is a convex function of the $n-$dimensional parameter vector $\theta$.
+  \item We will prove that for an arbitrary number of examples $m$, and number of features $n$, that the Least Sqares cost function $J(\theta)$ is a convex function of the $n-$dimensional parameter vector $\theta$. \\
+  In order to prove this, it is sufficient to show that the Hessian matrix, $\nabla_{\theta}^2 J(\vec{\theta})$, is positive semi-definite. We will refer to the Hessian matrix as $H$.
+  
+  \begin{fact}[Given]
+   Where $H$ is the Hessian matrix $\nabla_{\theta}^2 J(\vec{\theta})$, if $H$ is positive semi-definite, then $J(\vec{\theta})$ is convex.
+  \end{fact}
+  \begin{fact}[Given]
+   Where $H$ is the Hessian matrix, if $\forall \vec{z}, \vec{z}^T H \vec{z} \geq 0$, then $H$ is positive semi-definite.
+  \end{fact}
+  %\begin{fact}[Given]
+  % The sum of convex functions is also a convex function.
+  %\end{fact}
+  \begin{lemma}
+  Where $H$ is the Hessian matrix $\nabla_{\theta}^2 J(\vec{\theta})$, the diagonal of $H$ is always non-negative. 
+  
+  	\begin{proof}[Proof of Lemma]
+  	Note that $\nabla_{\theta}^2\sum_{i = 1}^{m} f(\vec{\theta}_i) = \sum_{i = 1}^{m}\nabla_{\theta}^2 f(\vec{\theta}_i)$, so we can discuss $\nabla_{\theta}^2 f(\vec{\theta}_i)$ for an arbitrary instance $i$ without loss of generalization. Let $H$ be this arbitrary instance.
+  	
+  	Let $H_{ij}$ be an arbitrary entry of $H$. We can calculate the value of this entry as follows.
+    \begin{align*}
+    \frac{\partial^2J(\vec{\theta})}{\partial\theta_i\partial\theta_j} &= \frac{1}{2}\left( (\theta_0x_0 + \theta_1x_1 + \dots + \theta_mx_m) - \vec{y} \right)^2 \Longleftrightarrow \\
+    \frac{\partial J^\prime(\vec{\theta})}{\partial\theta_j} &= \left( (\theta_0x_0 + \theta_1x_1 + \dots + \theta_mx_m) - \vec{y} \right)x_i \\ 
+    &= \theta_0x_0x_i + \theta_1x_1x_i + \dots + \theta_mx_mx_i - \vec{y}x_i  \Longleftrightarrow \\
+    J^{\prime\prime}(\vec{\theta}) &= x_jx_i .
+    \end{align*}
+    Notice that along the diagonal, for every $H_{ij}$ we have $i = j$, so the value for that entry is $(x_i)^2$ which is always non-negative. The sum of matrices with non-negative diagonal values will also have non-negative entries on the diagonal.
+    \end{proof}
+  
+  \end{lemma}
+  
+  We are now prepared to prove that $J(\vec{\theta})$ is a convex function.
+  
+  \begin{proof}[Proof of Convexity]
+   Consider $\vec{z}^T H \vec{z}$ for arbitrary $\vec{z}$. Observe,
+   \begin{align*}
+   \vec{z}^T H \vec{z} \Leftrightarrow& & \\
+   \Tr(\vec{z}^T H \vec{z}) \Leftrightarrow& & \left(\vec{z}^T H \vec{z} \text{ is a single scalar value} \right) \\
+   \Tr(\vec{z}\vec{z}^T H) \Leftrightarrow& & \left( 5^{th} \text{ trace property, page 9 of review} \right) \\
+   \vec{z}\vec{z}^T \Tr(H) & & \left( 3^{rd} \text{ trace propery, page 9 of review} \right).
+   \end{align*}
+   By the proven lemma we know that $tr(H)$ is non-negative. We can see that $\vec{z}\vec{z}^T$ is always non-negative. Thus, $\forall \vec{z}, \vec{z}^T H \vec{z} \geq 0$. By \textit{Fact 2} we have that $H$ is positive semi-definite, and by \textit{Fact 1} we have that $J(\vec{\theta})$ is convex. 
+  \end{proof}
+  
+  
+  
   \item Weka Problem
   	\begin{enumerate}
   	\item[(a)] Model: $y= -0.1343(x_1) + 1.8477(x_2) + -0.8966(x_3) + 4.3608$ \\
@@ -29,33 +77,53 @@
   \item To prove $ w \cdot x = \ln\left( \frac{p(1\mid x,w)}{p(0\mid x,w)}\right)  $ we will simplify $\ln\left( \frac{p(1\mid x,w)}{p(0\mid x,w)}\right) $ and demonstrate the equality.
   
    \begin{proof}We were given $p(1\mid x,w) =\frac{e^{w \cdot x}}{1 + e^{w \cdot x}}$ and $p(0\mid x,w) = 1 - p(1\mid x,w)$. From this we can find that 
-    
 	\begin{align*}
-	\begin{split}
+	%\begin{split}
 	p(0\mid x,w) &= 1 - p(1\mid x,w) \\
 	&= 1 - \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \\
 	&= \frac{1 + e^{w \cdot x}}{1 + e^{w \cdot x}} - \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \\
 	&= \frac{1 + e^{w \cdot x} - e^{w \cdot x}}{1 + e^{w \cdot x}} \\
 	&= \frac{1}{1 + e^{w \cdot x}} .
-	\end{split}
+	%\end{split}
 	\end{align*}
-   
    Now that we have expressions for $p(1\mid x,w)$ and $p(0\mid x,w)$, we can substitute them into
-   
    	\begin{align*}
-   	\begin{split}
+   	%\begin{split}
    	\ln\left(\frac{p(1\mid x,w)}{p(0\mid x,w)}\right) &= \ln \left( \frac{\frac{e^{w \cdot x}}{1 + e^{w \cdot x}}}{\frac{1}{1 + e^{w \cdot x}}} \right)  \\
    	&= \ln \left( \frac{e^{w \cdot x}}{1 + e^{w \cdot x}} \right) - \ln \left( \frac{1}{1 + e^{w \cdot x}} \right) \\
    	&= \Big[ \ln \left( e^{w \cdot x} \right) - \ln \left( 1 + e^{w \cdot x} \right)  \Big] - \Big[ \ln \left( 1 \right) - \ln \left( 1 + e^{w \cdot x} \right)   \Big] \\
    	&= \ln \left( e^{w \cdot x} \right) - \ln \left( 1 + e^{w \cdot x} \right) + \ln \left( 1 + e^{w \cdot x} \right) \\
    	&= \ln \left( e^{w \cdot x} \right) \\
    	&= w \cdot x
-   	\end{split}
+   	%\end{split}
    	\end{align*}
-   
    which is what we intended to prove.
-  
    \end{proof}
+   
+   \item What follows is the derivation of a closed form expression for the  $\theta$ minimizing the given $J_R$:
+   
+   \[
+   J_R(\theta) = \frac{1}{2} \sum_{i=1}^{m} \left( h_\theta (x^{(i)}) - y^{(i)} \right)^2 + \frac{\theta \cdot \theta}{2} 
+   \]
+   We will begin with finding the gradient of $J_R$. This can be done as follows:
+   
+   \begin{align}
+   \nabla_\theta J_R(\theta) &= \nabla_\theta \left( \frac{1}{2} \sum_{i=1}^{m} \left( h_\theta (x^{(i)}) - y^{(i)} \right)^2 + \frac{\theta \cdot \theta}{2} \right)   \\
+   &= \nabla_\theta \frac{1}{2} \left((X\theta - \vec{y})^T(X\theta - \vec{y}) + \theta^T \theta \right) \\
+   &= \frac{1}{2} \nabla_\theta \left( \theta^TX^TX\theta - \theta^TX^T\vec{y} - \vec{y}^TX\theta + \vec{y}^T\vec{y} + \theta^T\theta \right) \\
+   &= \frac{1}{2} \nabla_\theta \Tr \left( \theta^TX^TX\theta - \theta^TX^T\vec{y} - \vec{y}^TX\theta + \vec{y}^T\vec{y} + \theta^T\theta \right) \\
+   &= \frac{1}{2} \nabla_\theta \left( \Tr(\theta^TX^TX\theta) - \Tr( \theta^TX^T\vec{y}) - \Tr(\vec{y}^TX\theta) + \Tr(\vec{y}^T\vec{y}) + \Tr(\theta^T\theta) \right) \\
+   &= \frac{1}{2} \nabla_\theta \left( \Tr(\theta^TX^TX\theta) - 2\Tr(\vec{y}^TX\theta) + \Tr(\vec{y}^T\vec{y}) + \Tr(\theta^T\theta) \right) \\
+   &= \frac{1}{2} \left( X^TX\theta + X^TX\theta - 2X^T\vec{y} - 2\theta \right)  \\
+   &= X^TX\theta - X^T\vec{y} - \theta
+   \end{align}
+   
+  \small [ Notes: (4) the trace of a real number is the real number. (6) $\Tr(A) = \Tr(A^T)$. (7.1) $\nabla_{A^T} \Tr (ABA^TC) = B^TA^TC^T + BA^TC$. (7.2) $\nabla_x\Tr(x^TAx) = 2Ax.$
+  ]
+  
+  Now, to minimize $J_R$ we set $\nabla_\theta J_R$ equal to zero and solve for $\theta$:
+  
+  
 \end{enumerate}
 
 \end{document}
