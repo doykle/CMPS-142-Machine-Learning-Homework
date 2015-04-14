@@ -115,16 +115,16 @@ def train( step_size, data ):
    return counter, theta
    
 # Determine the accuracy of the built theta vector
-def evaluate( theta, mat, debug = False ):
+def evaluate( theta, data, debug = False ):
    predictions = []
-   for row in mat.matrix:
+   for row in data.matrix:
       predictions.append( sum([ th * x for th,x in zip(theta,row)]) )
   
    # Comparing the calculated prediction values against
    # known labels from the test data.
    c = 0
    x = 0
-   for y,p in zip(mat.labels,predictions):
+   for y,p in zip(data.labels,predictions):
 
       if (y == 1 and p > .25) or (y == 0 and p <= .25):
          if debug: print y, p, "YES"
@@ -140,7 +140,7 @@ if __name__ == '__main__':
    # Seeding the random function with a constant value
    # helps with debugging and allows for observing the 
    # affect of changing code
-   random.seed(0)
+   #random.seed(0)
    
    # Build the test and training data sets
    training = HyperCube( 500, 11 )
