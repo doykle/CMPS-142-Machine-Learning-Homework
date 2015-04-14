@@ -39,7 +39,7 @@ class HyperCube( object ):
          if row[0] == 1:
             self.labels.append( row[0] )
          else:
-            self.labels.append( -1 )
+            self.labels.append( 0 )
            
 # To achieve balance, we will select entry values from a 
 # carefully populated, balanced array of boolean values.
@@ -68,67 +68,69 @@ def get_number( range ):
 
 # Checking if the gradient descent has converged by monitoring
 # rate of change in the calculated error values.
-def yh_check( new, vals ):
+def yh_check( vals ):
    steady = True
-   vals.pop(0)
-   vals.append(new)
    l = len(vals)-1
    avg = sum([ val/l for val in vals ])
    for val in vals:
-      if abs(avg-val) > 0.001:
+      if abs(avg-val) > 0.01:
          steady = False
-   return (steady, vals)
+   return steady
 
 # The main implementation of Stochastic Gradient descent. 
 # This is where we use our training data to build the 
 # theta vector. 
-def train( step_size ):
-   tr = training.matrix
-   trl = training.labels
+def train( step_size, data ):
+   tr = data.matrix
+   trl = data.labels
    theta = [0,0,0,0,0,0,0,0,0,0,0]
-   yh_values = [10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+   yh_values = []
    counter = 0
+   b = False
    
    # Using one row at a time to adjust the theta vector
-   for row,label in zip(tr,trl):
+   while( (not b) and (counter < 10) ):
       counter = counter + 1
-      
-      # Calculating [01X1 + 02X2 + ... + 0nXn]
-      h = sum( [( th * x ) for th,x in zip(theta,row) ] )
-      
-      # The error calculation: y - h(x)
-      yh = label - h
-      
-      # Checking to see if the error is consistently minimal
-      b, yh_values = yh_check( yh, yh_values )
-      if b:
-         break
-      
-      #print h, '\t', yh, '\t', theta
-      
-      # Adjusting each value of theta in the vector
-      for idx,(th,x) in enumerate( zip(theta,row) ):
-         theta[idx] = th + step_size * ( ( yh ) * x )
+      for row,label in zip(tr,trl):
+                  
+         # Calculating [01X1 + 02X2 + ... + 0nXn]
+         h = sum( [( th * x ) for th,x in zip(theta,row) ] )
+         
+         # The error calculation: y - h(x)
+         yh = label - h
+         
+         # Store the error values in an array
+         yh_values.append( yh )
+         
+         #print h, '\t', yh, '\t', theta
+         
+         # Adjusting each value of theta in the vector
+         for idx,(th,x) in enumerate( zip(theta,row) ):
+            theta[idx] = th + step_size * ( ( yh ) * x )
+            
+      if (evaluate( theta, test ) == 500) or yh_check( yh_values ): 
+         b = True
+      yh_values = []
  
    return counter, theta
    
 # Determine the accuracy of the built theta vector
-def evaluate( theta ):
+def evaluate( theta, mat, debug = False ):
    predictions = []
-   for row in test.matrix:
+   for row in mat.matrix:
       predictions.append( sum([ th * x for th,x in zip(theta,row)]) )
   
    # Comparing the calculated prediction values against
    # known labels from the test data.
    c = 0
    x = 0
-   for y,p in zip(test.labels,predictions):
+   for y,p in zip(mat.labels,predictions):
 
-      if (y == 1 and p > 0) or (y == -1 and p <= 0):
-         #print y, p, "YES"
+      if (y == 1 and p > .25) or (y == 0 and p <= .25):
+         if debug: print y, p, "YES"
          c = c + 1
       else:
-         #print y, p, "NOOOO"
+         if debug: print y, p, "NOOOO"
          x = x + 1
 
    #print "Correct: ", c, " Incorrect: ", x
@@ -138,10 +140,11 @@ if __name__ == '__main__':
    # Seeding the random function with a constant value
    # helps with debugging and allows for observing the 
    # affect of changing code
-   #random.seed(0)
+   random.seed(0)
    
    # Build the test and training data sets
-   training = HyperCube( 1000, 11 )
+   training = HyperCube( 500, 11 )
+   dev = HyperCube( 500, 11 )
    test = HyperCube( 500, 11 )
    
    # In order to determine an ideal step size, we will 
@@ -149,12 +152,14 @@ if __name__ == '__main__':
    results = []
    for x in xrange(1,1000):
       step = float(x)/1000
-      a,t = train( step )
-      c = evaluate( t )
+      a,t = train( step, training )
+      c = evaluate( t, dev )
       results.append( (step, c, a, t) )
    
    # The results can be sorted for visual assessment.
-   winners = sorted(results, key= operator.itemgetter(1,2), reverse=True)
+   winners = sorted(results, key= operator.itemgetter(1,2), reverse=True)[:500]
+   #for thing in winners:
+   #   print thing
    
    # Here we pick out the result which combines highest
    # accuracy and lowest number of rows used to train.
@@ -168,7 +173,8 @@ if __name__ == '__main__':
          min_a = a
          ideal_t = t
          ideal_step = step
-         
+
+   #print evaluate( ideal_t, test )
    print max_c, min_a, ideal_step, ideal_t
   
    # This print statement can be used for exporting the matrices
