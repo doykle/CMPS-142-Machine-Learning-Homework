@@ -24,7 +24,6 @@ class HyperCube( object ):
       columns = 0
       
       number_pool = make_pool( instances * features )
-      random.shuffle( number_pool )
       
       while rows < instances:
          columns = 0
@@ -58,6 +57,7 @@ def make_pool( size ):
       counter = counter + 1
       numbers.append( 1 )
    
+   random.shuffle( numbers )
    return numbers
  
 # The random number generator is used to select indices from 
