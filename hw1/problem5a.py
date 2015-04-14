@@ -171,7 +171,8 @@ if __name__ == '__main__':
          
    print max_c, min_a, ideal_step, ideal_t
   
+   # This print statement can be used for exporting the matrices
+   # I used it to look at the data in Weka
    #for idx,row in enumerate(training.matrix):
    #   print "{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11}".format( training.labels[idx],row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10])
-   #      print(value),
-   #   print ''
+   #
