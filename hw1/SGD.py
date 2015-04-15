@@ -1,3 +1,11 @@
+# 
+# Written by Alejandro Aguilar (aaguil10@ucsc.edu)
+# 
+# CMPS 142
+# Homework 1, problem 5
+#
+# This is an implementation of Stochastic Gradient descent
+#------------------------------------------------------------------------------- 
 import numpy as np
 from random import *
 
@@ -36,7 +44,7 @@ def costfunctionA(theta, trainingEx):
 	return cost
 	
 def test_thetaA(theta, testEx):
-	threshold = .02
+	threshold = .5
 	vect = theta*testEx
 	h = 0
 	for i in range(0,11):
@@ -74,7 +82,7 @@ def test_thetaB(theta, testEx):
 		y = 1
 	else:
 		y = 0
-	threshold = .25
+	threshold = .5
 	vect = theta*testEx
 	h = 0
 	for i in range(0,11):
@@ -162,7 +170,7 @@ for i in range(0,500):
 #-----------------------------------Part A--------------------------------------
 
 prediction_errors = 0
-epochs = 2
+epochs = 1
 
 #Training theta
 for k in range(0,epochs):
@@ -182,7 +190,7 @@ print "prediction_errors: " + str(prediction_errors)
 #-----------------------------------Part B--------------------------------------
 
 prediction_errors = 0
-epochs = 1
+epochs = 2
 #Training theta
 for k in range(0,epochs):
 	for i in range(0,500):
@@ -208,12 +216,18 @@ w = []
 #Training theta
 for k in range(0,epochs):
 	for i in range(0,500):
-		update_theta(theta,training_set[i],.0001,costfunctionC)
-		w.append(theta)
+		update_theta(theta,np.array(training_set[i]),.0001,costfunctionC)
+		w.append( np.array(theta) )
 	
 print ""
 print "PART C"
-print "w_1000: " + str(w[999])
-print "avg w: " + str(calc_avg(w))
-print "avg w of second epoch: " + str(calc_avg2(w))
+#print "w_1000: " + str(w[999])
+#print "avg w: " + str(calc_avg(w))
+#print "avg w of second epoch: " + str(calc_avg2(w))
+
+#log-likelihood = w*x see forum.
+print "log-likelihood: " 
+print str(w[999]*calc_avg(w))
+print "log-likelihood of second epoch: "
+print str(w[999]*calc_avg2(w))
 
