@@ -129,7 +129,7 @@ def evaluate( theta, data, debug = False ):
    x = 0
    for y,p in zip(data.labels,predictions):
 
-      if (y == 1 and p > .25) or (y == 0 and p <= .25):
+      if (y == 1 and p > .5) or (y == 0 and p <= .5):
          if debug: print y, p, "YES"
          c = c + 1
       else:

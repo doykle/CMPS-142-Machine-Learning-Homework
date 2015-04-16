@@ -163,8 +163,10 @@ def log_lik( theta, test ):
       #print y * math.log( h ), '\t', ( 1 - y ) * math.log( 1 - h ), '\n'
       
       likelihood = likelihood + ( y * math.log( h ) + ( 1 - y ) * math.log( 1 - h ) )
+      
+      likelihood2 = likelihood + ( y * math.log( h, 10 ) + ( 1 - y ) * math.log( 1 - h, 10 ) )
    
-   return likelihood
+   return likelihood, likelihood2
       
    
 if __name__ == '__main__':
@@ -197,7 +199,9 @@ if __name__ == '__main__':
    print "Average of all thetas", log_lik( tall_avg, test )
    print "Average of later half of thetas", log_lik( thlf_avg, test )
    
-   
+   print evaluate( t_1000, test )
+   print evaluate( tall_avg, test )
+   print evaluate( thlf_avg, test )
    """
       
    # In order to determine an ideal step size, we will 

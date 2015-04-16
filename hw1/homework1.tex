@@ -14,10 +14,10 @@
 
 \section*{CMPS 142: Homework 1}
 
-\begin{tabular}{p{10cm} l}
-    & Alejandro Aguilar \\
-    & John-Michael Burke \\
-    & Kevin Doyle \\
+\begin{tabular}{p{8cm} l l}
+    & Alejandro Aguilar & aaguil10@ucsc.edu \\
+    & John-Michael Burke & jburke2@ucsc.edu\\
+    & Kevin Doyle 	& kdoyle@ucsc.edu \\
 \end{tabular}
     
 \begin{enumerate}
@@ -139,18 +139,23 @@
 	\item[(a)] Only one epoch was necessary for entirely correct labeling of the test set. We tested step sizes $0.001$ - $1.000$ and found that step sizes $0.001$ - $0.020$ perform the best. The final hypothesis is
 	\begin{align*}
 	 &\frac{e^{\vec{\theta} \cdot x}}{1 + e^{\vec{\theta} \cdot x}} \text{ where } \vec{\theta} \cdot x = \\
-	  & \vec{x} \dot < 1.412, -0.023, -0.024, -0.011, -0.018, -0.016, -0.002, 0.025, 0.012, 0.097, 0.054 >.
+	  & \small{ \vec{x} \cdot < 1.412, -0.023, -0.024, -0.011, -0.018, -0.016, -0.002, 0.025, 0.012, 0.097, 0.054 >.}
 	\end{align*}
 	The first value in the $\theta_0$ spot is large, and the rest of the $\theta$ values are small. This makes sense because the labels are exactly correlated with the value of $x_0$. By scaling $x_0$ to be significant in the weight of the instance, each instance's weight is then more correlated with it's label. 
 	
 	\item[(b)] Only one epoch was necessary to achieve 100\% labeling accuracy, using a step size around $0.01$. In the hypothesis, each $\theta$ is weighted near $0.5$. This makes sense because the label of each instance is determined by the sum of equally influential values ($1$ or $-1$ in every $x_j$). So to predict the label we can sum the $x_j$'s, giving each equal weight, and that will correlate with an appropriate label value.
 	
-	\item[(c)] Log-likelihoods: \\
+	\item[(c)] Log-likelihoods \\
+	Calculated with
+	\[ \ell ( \theta ) = \sum_{i=1}^{m} y^{(i)}\log (h_\theta(x^{i})) + (1-y^{i})\log(1 - h_\theta(x^{i}))  \].
 	\begin{tabular}{l l}
+		\textbf{Theta vectors} & \textbf{log-likelihood values} \\
 		1000th $\vec{\theta}$ &: -250.75  \\
 		$\sum_{i=1}^{1000} \vec{\theta} / 1000 $ &: -657.67 \\
 		$\sum_{i=501}^{1000} \vec{\theta} / 500 $ &: -657.28  \\
-	\end{tabular} 
+	\end{tabular} \\ \\
+	Evaluating the accuracy of these theta vectors confirms the pattern we see in the log-likelihoods. The accuracy of the $1000^{th}$ theta vector is twice that of the other two, which scored the same accuracy.
+	
 	\end{enumerate}
   
 \end{enumerate}
