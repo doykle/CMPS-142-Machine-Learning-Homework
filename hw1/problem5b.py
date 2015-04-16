@@ -2,13 +2,13 @@
 # Written by Kevin Doyle (kdoyle@ucsc.edu)
 # 
 # CMPS 142
-# Homework 1, problem 5(a)
+# Homework 1, problem 5(b)
 #
 # This is an implementation of Stochastic Gradient descent
 # using a boolean matrix designed according to the homework.
 ####
 
-import random, operator, math
+import random, operator, sys, math
 
 # Build an nxm boolean matrix with balanced entries
 class HyperCube( object ):
@@ -36,10 +36,17 @@ class HyperCube( object ):
          
    def build_labels( self ):
       for row in self.matrix:
-         if row[0] == 1:
-            self.labels.append( row[0] )
-         else:
+         neg = 0
+         pos = 0
+         for entry in row:
+            if entry == -1:
+               neg = neg + 1
+            if entry == 1:
+               pos = pos + 1
+         if neg > pos:
             self.labels.append( 0 )
+         else:
+            self.labels.append( 1 )
            
 # To achieve balance, we will select entry values from a 
 # carefully populated, balanced array of boolean values.
@@ -89,7 +96,7 @@ def train( step_size, data ):
    b = False
    
    # Using one row at a time to adjust the theta vector
-   while( (not b) and (counter < 10) ):
+   while( (not b) and (counter < 20) ):
       counter = counter + 1
       for row,label in zip(tr,trl):
                   
@@ -110,7 +117,7 @@ def train( step_size, data ):
          for idx,(th,x) in enumerate( zip(theta,row) ):
             theta[idx] = th + step_size * ( ( yh ) * x )
             
-      if (evaluate( theta, test ) == 500) or yh_check( yh_values ): 
+      if (evaluate( theta, test ) == 500) or yh_check( yh_values ) and counter > 3: 
          b = True
       yh_values = []
  
@@ -129,7 +136,7 @@ def evaluate( theta, data, debug = False ):
    x = 0
    for y,p in zip(data.labels,predictions):
 
-      if (y == 1 and p > .25) or (y == 0 and p <= .25):
+      if (y == 1 and p > .5) or (y == 0 and p <= .5):
          if debug: print y, p, "YES"
          c = c + 1
       else:
@@ -143,7 +150,7 @@ if __name__ == '__main__':
    # Seeding the random function with a constant value
    # helps with debugging and allows for observing the 
    # affect of changing code
-   #random.seed(0)
+   random.seed(0)
    
    # Build the test and training data sets
    training = HyperCube( 500, 11 )
@@ -160,7 +167,7 @@ if __name__ == '__main__':
       results.append( (step, c, a, t) )
    
    # The results can be sorted for visual assessment.
-   winners = sorted(results, key= operator.itemgetter(1,2), reverse=True)[:500]
+   winners = sorted(results, key= operator.itemgetter(1,2), reverse=True)[:100]
    #for thing in winners:
    #   print thing
    
@@ -177,7 +184,7 @@ if __name__ == '__main__':
          ideal_t = t
          ideal_step = step
 
-   #print evaluate( ideal_t, test )
+   print evaluate( ideal_t, test )
    print max_c, min_a, ideal_step, ideal_t
   
    # This print statement can be used for exporting the matrices
