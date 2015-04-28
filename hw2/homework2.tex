@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage,mathpazo,amsfonts,nicefrac,amsmath,amsthm}
+
+\newtheorem{fact}{Fact}
+\newtheorem*{lemma}{Lemma}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\Tr}{tr}
+
+\begin{document}
+
+\section*{CMPS 142: Homework 2}
+
+\begin{tabular}{p{8cm} l l}
+    & Dominic Balassone & dbalasso@ucsc.edu \\
+    & Duncan McColl & dmccoll@ucsc.edu\\
+    & Kevin Doyle 	& kdoyle@ucsc.edu \\
+\end{tabular}
+    
+\begin{enumerate}
+  \item Weka Experiements
+  
+  \begin{enumerate}
+  	\item[(a)] Comparing algorithms, testing on training set: \\ \\
+  		\begin{tabular}{l l}
+  			\textbf{Classifier} & \textbf{\% Correctly Classified Instances} \\
+  			Nearest Neighbors & 100.0 \\
+  			Naive Bayes & 76.3 \\
+  			Logistic Regression & 78.3
+  	
+  		\end{tabular} \\
+  		
+  		Here, nearest neighbors performed the best. This is because nearest neighbors evaluates test data using all of the training data in its original form. In this case we were told to use the training data as test data, and as a result the 'nearest neighbor' for every test instance, was that same point as it exists in the training data.
+  		
+  	\item[(b)] Logistic regression model: \\ \\
+	  	\begin{math}
+			\left(
+	  			\begin{array}{r}
+	  				-0.1232 \\
+	  				-0.0352 \\
+	  				0.0133 \\
+	  				-0.0006 \\
+	  				0.0012 \\
+	  				-0.0897 \\
+	  				-0.9452 \\
+	  				-0.0149 
+	  			\end{array}  		
+	  		\right)
+	  		\bullet
+	  		\left(
+	  			\begin{array}{r}
+	  				preg \\
+	  				plas \\
+	  				pres \\
+	  				skin \\
+	  				insu \\
+	  				mass \\
+	  				pedi \\
+	  				age 
+	  			\end{array}
+	  		\right)
+	  		+ 8.4047 = 0	  		
+	  	\end{math} \\
+	\item[(c)] Comparing algorithms using 10-fold cross-validation: \\ \\
+  		\begin{tabular}{l l}
+  			\textbf{Classifier} & \textbf{\% Correctly Classified Instances} \\
+  			Nearest Neighbors & 70.2 \\
+  			Naive Bayes & 76.3 \\
+  			Logistic Regression & 77.2
+  		\end{tabular} \\
+  		
+  		Using cross-validation decreased the nearest neighbors accuracy significantly. The other two stayed pretty much the same. 
+  		
+  	\item[{d}] Normalize: \\
+	  	The normalize filter transforms all the data values into the range $[0,1]$ while maintaining the scale of relativity. \\
+	  	Running logistic regression with the normalized values does not change the resulting accuracy, because the relative 'distance' between all points is maintained. \\
+	  	The weight vector has changed. The weight of each attribute has been scaled by exactly the same magnitude that the range of each attribute value was scaled, under an inverse operation. For example, the original values for the plasma attribute, \textit{plas}, ranged $[0,199]$, and in normalization they were all divided by $199$, so the weight of that attribute in the vector was multiplied by $199$. \\
+	 
+	 \item[(e)] Ridge Parameter: \\
+	 	  		\textbf{0.0}: Accuracy is 77.2 \% correctly classified. The weights are the same as when the ridge parameter was very very small, essentially zero anyway. \\
+	 	  		\textbf{0.3}: Accuracy is 77.2 \% correctly classified. The weights decrease a little, as expected. \\
+	 \item[(f)] KNN: \\
+	 			\textbf{Prediction}: 3NN or 5NN will perform better than 1NN. A lot of the attributes have ranges in which the classifications of attributes are mixed. There are also outliers. With 1NN, too much weight is put on just one nearby data point. By considering a number of surrounding points, 3NN and 5NN ensure a better representation for the classification of data points nearby the test point. \\
+	 			\textbf{Results}: 1NN had 70.2\% accuracy. 3NN had 72.7\% accuracy. 5NN had 73.2\% accuracy.  \\
+	 \item[(g)] Copies of \textit{pres}: \\
+	 	\textbf{Expected}: We expect that the accuracies will remain somewhat the same. For nearest neighbors, each copy will contribute to the correct or incorrect classification, so the accuracy of the algorithm will swing toward the accuracy of the algorithm on that attribute. For Naive Bayes something similar will happen, where the weight for that attribute is essentially multiplied by 10, so it will affect the decision making process. For logistic regression the addition of that data will not affect the accuracy. In this case, the added data contributes no new information, the weight of the single attribute will be divided among the copies and the accuracy will not change. \\ 
+	 	\textbf{Results}: \\
+  		\begin{tabular}{l l}
+  			\textbf{Classifier} & \textbf{\% Correctly Classified Instances} \\
+  			Nearest Neighbors & 67.3 \\
+  			Naive Bayes & 71.6 \\
+  			Logistic Regression & 77.2
+  		\end{tabular} \\
+  		
+	\item[(h)] 20 random valued attributes: \\
+  		\begin{tabular}{l l}
+  			\textbf{Classifier} & \textbf{\% Correctly Classified Instances} \\
+  			Nearest Neighbors & 58.7 \\
+  			Naive Bayes & 75.0 \\
+  			Logistic Regression & 76.0
+  		\end{tabular} \\
+  	
+  \end{enumerate}
+  
+  \item Bayesian Probability \\
+  	\begin{enumerate}
+  		\item[(a)] Outcome space: $\{FF, FM, MF, MM\}$, and an atomic event is any one of those outcomes. 
+  		\item[(b)] Using Bayes rule, we have \\
+	  		\begin{align*}
+	  			 P(Exactly 1 Female &\mid Some Male ) \\  &= \frac{P( Some Male \mid Exactly 1 Female) P(Exactly 1 Female)}{P(Some Male)} \\
+	  			 & = \frac{1 \cdot \frac{1}{2}}{\frac{3}{4}} = \frac{2}{3}
+	  		\end{align*} 
+	  		Where it can be seen from the outcome space that when there is exactly one female child, there is a 100\% probability that the second child is male. There is a 50\% chance of having exactly one female child, because half of the possible outcomes include a single female child. Finally, three of the outcomes include a male child. \\
+		\item[(c)] Having seen that the younger child is a boy, using Bayes rule, we have
+	  		\begin{align*}
+	  			 P( Older & Child Female \mid Younger Child Male ) \\
+	  			  &= \frac{P( Younger Child Male \mid Older Child Female ) P(Older Child Female)}{P(Younger Child Male)} \\
+	  			 & = \frac{1 \cdot \frac{1}{2}}{1} = \frac{1}{2}
+	  		\end{align*} 
+	  		The key here is with $P( Younger Child Male \mid Older Child Female )$. We saw that the younger child is male, and so if we are given that the older child is female, we already know without a doubt that the younger is male. In the outcome space there are two possible events which include an older female, so $P(Older Child Female)$ is $\frac{1}{2}$. We saw the boy so $P(Younger Child Male)$ is $1$.
+	  	 
+	  		
+  	\end{enumerate}
+  	
+  	\item Naive Bayes \\
+  		In order to predict $\textbf{H}$ 
+  	
+  	\item Expected Value \\
+	  	\begin{align*}
+		  	E[XY] &= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}X_i Y_iP(X_i,Y_i) \\
+		  	&= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}X_i Y_iP(X_i)P(Y_i) \\
+		  	&= \sum_{i=0}^{\infty} X_i P(X_i)\sum_{j=0}^{\infty}Y_i P(Y_i) \\
+		  	&= E[X]E[Y]
+	  	\end{align*}
+  	
+\end{enumerate}
+
+\end{document}
