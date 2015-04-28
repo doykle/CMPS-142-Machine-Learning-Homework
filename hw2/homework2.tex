@@ -33,7 +33,9 @@
   	
   		\end{tabular} \\
   		
-  		Here, nearest neighbors performed the best. This is because nearest neighbors evaluates test data using all of the training data in its original form. In this case we were told to use the training data as test data, and as a result the 'nearest neighbor' for every test instance, was that same point as it exists in the training data.
+  		Here, judging only by accuracy we see that nearest neighbors performed the best. This is because nearest neighbors compares the original training data with each test instance, and since each test instance is also an instance in the training data, it was an easy match. This demonstrates nearest neighbors as a good choice for when training data can account for the entire outcome space. 
+  		
+  		For practical purposes, it would be wiser to choose logistic regression as the 'best' algorithm, since it scored the highest with a non-trivial evaluation.
   		
   	\item[(b)] Logistic regression model: \\ \\
 	  	\begin{math}
@@ -75,18 +77,19 @@
   		Using cross-validation decreased the nearest neighbors accuracy significantly. The other two stayed pretty much the same. 
   		
   	\item[{d}] Normalize: \\
-	  	The normalize filter transforms all the data values into the range $[0,1]$ while maintaining the scale of relativity. \\
-	  	Running logistic regression with the normalized values does not change the resulting accuracy, because the relative 'distance' between all points is maintained. \\
-	  	The weight vector has changed. The weight of each attribute has been scaled by exactly the same magnitude that the range of each attribute value was scaled, under an inverse operation. For example, the original values for the plasma attribute, \textit{plas}, ranged $[0,199]$, and in normalization they were all divided by $199$, so the weight of that attribute in the vector was multiplied by $199$. \\
-	 
+	  	The normalize filter transforms all the data values into the range [0, 1], using the formula $X - X_{min} / X_{max} - X_{min}$. This maintains the scale of each attribute within the unit interval.  Because of this logistic regression's prediction accuracy will not change.  \\
+		The weight vector did change. Each new value in the weight vector is proportional to the old value with a factor of 1/range, $W_{new} = W_{old} * 1/range$. This is because the weight vector value describes how a unit of change in that value affects the probability of the outcome, and we have simply redefined a unit of change. \\	 
 	 \item[(e)] Ridge Parameter: \\
-	 	  		\textbf{0.0}: Accuracy is 77.2 \% correctly classified. The weights are the same as when the ridge parameter was very very small, essentially zero anyway. \\
-	 	  		\textbf{0.3}: Accuracy is 77.2 \% correctly classified. The weights decrease a little, as expected. \\
+	 	  		\textbf{0.0}: Accuracy is 77.2\% correctly classified. The weights are the same as when the ridge parameter was very very small, essentially zero anyway. \\
+	 	  		\textbf{0.3}: Accuracy is 77.2\% correctly classified. The weights decrease a little, which is expected because a penalty on increasing the weights was introduced. However, the weights are similar enough that the accuracy was not affected. \\
+	 	  		\textbf{2.0}: Accuracy is 77.1\%. Increasing the ridge value to 2.0 was enough to have a small affect on the accuracy. 
 	 \item[(f)] KNN: \\
-	 			\textbf{Prediction}: 3NN or 5NN will perform better than 1NN. A lot of the attributes have ranges in which the classifications of attributes are mixed. There are also outliers. With 1NN, too much weight is put on just one nearby data point. By considering a number of surrounding points, 3NN and 5NN ensure a better representation for the classification of data points nearby the test point. \\
+	 			\textbf{Prediction}: 3NN or 5NN will perform better than 1NN. With this data set, most of the attributes have ranges in which data with different classifications overlap. With 1NN, an outlier data point could easily cause the misclassification of test data, simply by the grace of that outlier being the closest to the test data. By basing classification on a larger number of neighbors, the 3NN and 5NN algorithms reduce the influence of outlier data points.  
 	 			\textbf{Results}: 1NN had 70.2\% accuracy. 3NN had 72.7\% accuracy. 5NN had 73.2\% accuracy.  \\
 	 \item[(g)] Copies of \textit{pres}: \\
-	 	\textbf{Expected}: We expect that the accuracies will remain somewhat the same. For nearest neighbors, each copy will contribute to the correct or incorrect classification, so the accuracy of the algorithm will swing toward the accuracy of the algorithm on that attribute. For Naive Bayes something similar will happen, where the weight for that attribute is essentially multiplied by 10, so it will affect the decision making process. For logistic regression the addition of that data will not affect the accuracy. In this case, the added data contributes no new information, the weight of the single attribute will be divided among the copies and the accuracy will not change. \\ 
+	 	\textbf{Expected}:  For nearest neighbors, adding copy's of an attribute weights the distance from that attribute on a training instance to a test instance heavier, so the algorithm will favor instances who are closer in that attribute. This will affect the prediction and therefore the accuracy. If somehow we were to get lucky and the attribute we picked was more accurate and more fully characterized than the others, this could increase accuracy, otherwise you would expect it to go down.\\
+	 	For Naive Bayes something similar will happen, that attribute will over contribute to the evidence portion of the posterior probability, ie. the normalizing constantant, so it will lessen the affect of the other variables in the decision making process. \\
+	    For logistic regression the addition of the data will not affect the accuracy. The algorithm will essentially divide up the optimal weight for that attribute among the copies which will result the same prediction. \\
 	 	\textbf{Results}: \\
   		\begin{tabular}{l l}
   			\textbf{Classifier} & \textbf{\% Correctly Classified Instances} \\
@@ -132,12 +135,12 @@
   		\end{align*}
   		Specifically, in order to predict $H$ from GPA data, we find the GPA values which make the following true.
   		\begin{align*}
-  		\frac{P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H})}{P(AP,GPA)} > \frac{P(AP \mid H) P(GPA \mid H) P(H)}{P(AP,GPA)}
+  		\frac{P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H})}{P(AP,GPA)} < \frac{P(AP \mid H) P(GPA \mid H) P(H)}{P(AP,GPA)}
   		\end{align*} 
   		In solving for the GPA value, we can multiply both side of the inequality by the shared denominator and get the same GPA range by looking at 
   		\begin{align*}
-  		P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H}) > P(AP \mid H) P(GPA \mid H) P(H) \Longleftrightarrow \\
-  		0 > P(AP \mid H) P(GPA \mid H) P(H) - \left( P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H}) \right) 
+  		P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H}) < P(AP \mid H) P(GPA \mid H) P(H) \Longleftrightarrow \\
+  		0 < P(AP \mid H) P(GPA \mid H) P(H) - \left( P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H}) \right) 
   		\end{align*}
   		The following table can be used to fill out and solve this inequality.\\ \\
   		\begin{tabular}{l l}
@@ -148,13 +151,13 @@
   			$P(\overline{H})$ & $5/8$ \\
   			$P(GPA \mid H)$ & $\frac{1}{\sqrt{2\pi\sigma_{H}^2}} e^{- \frac{(GPA - \mu_{H})^2}{2\sigma_{H}^2}} $ \\  	
   			$\mu_{H}$ & $3.4$ \\		
-  			$\sigma_{H}^2$ & $0.63$ \\
+  			$\sigma_{H}^2$ & $0.42$ \\
   			$P(GPA \mid \overline{H})$ & $\frac{1}{\sqrt{2\pi\sigma_{\overline{H}}^2}} e^{- \frac{(GPA - \mu_{\overline{H}})^2}{2\sigma_{\overline{H}}^2}} $ \\
-  			$\mu_{\overline{H}}$ & $3.083$ \\
-  			$\sigma_{\overline{H}}^2$ & $0.1737$ \\
+  			$\mu_{\overline{H}}$ & $3.0$ \\
+  			$\sigma_{\overline{H}}^2$ & $0.24333$ \\
   		\end{tabular} \\ \\
   		After filling out and solving the inequality for GPA, we find that we can predict: \\
-  		If AP courses are taken, predict $H$ if the GPA is between $2.891$ and $3.223$**. \\ \\
+  		If AP courses are taken, predict $H$ if the GPA is between $1.6783$ and $3.2198$. \\ 
   		
   		Evaluating honors status when AP courses are not taken can be done with very similar calculations, however $AP$ need to be replaced with $\overline{AP}$ and the following values should be used: \\ \\
   		\begin{tabular}{l l}
@@ -163,14 +166,14 @@
 	 		$P(\overline{AP} \mid \overline{H} )$ & $4/6$ \\
   		\end{tabular} \\ \\
   		Now we can say: \\
-  		If AP courses are not taken, predict $H$ if the GPA is between $2.882$ and $3.231$**. \\ \\
-  		** Note: These are the value we received after simplifying the expression by hand into quadratic from, and using wolframalpha.com to solve the quadratic equation. When we used code to iterate across all possible GPA values, the results were different. From the code, our results were: If AP, honors for GPAs in $[0.01, 2.43]\cup[3.49, 4.00]$. If no AP, honors for GPAs in $[0.01, 1.99]\cup[3.94, 4.00]$.
+  		If AP courses are not taken, predict $H$ if the GPA is between $1.7583$ and $3.1398$. \\ \\
+
   		
   	\item Expected Value \\
 	  	\begin{align*}
-		  	E[XY] &= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}X_i Y_iP(X_i,Y_i) \\
-		  	&= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}X_i Y_iP(X_i)P(Y_i) \\
-		  	&= \sum_{i=0}^{\infty} X_i P(X_i)\sum_{j=0}^{\infty}Y_i P(Y_i) \\
+		    E[XY] &= \sum_{X}\sum_{Y}x_i y_iP(x_i,y_i) \\
+		  	&= \sum_{X}\sum_{Y}x_i y_iP(x_i)P(y_i) \\
+		  	&= \sum_{X}x_i P(x_i)\sum_{Y}y_i P(y_i) \\
 		  	&= E[X]E[Y]
 	  	\end{align*}
   	

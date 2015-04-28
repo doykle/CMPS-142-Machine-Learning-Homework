@@ -4,7 +4,7 @@ import sys, math
 
 def NBgausHonor( gpa ):
       mean = 3.4
-      vari = 0.63
+      vari = 0.42
       
       const = float(1) / math.pow( 2 * math.pi * vari, .5 )
       
@@ -12,15 +12,21 @@ def NBgausHonor( gpa ):
       
       result = const * epower
       
+      print const, epower
+      
       return result
 
 def NBgausNormal( gpa ):
-      mean = 3.083
-      vari = 0.1737
+      mean = 3.0
+      vari = 0.243333
+      #0.292
+      
       
       const = float(1) / math.pow( 2 * math.pi * vari, .5 )
-      
+
       epower = math.exp(-1 * math.pow( gpa - mean, 2 ) / ( 2 * vari ))
+      
+      print const, epower
       
       result = const * epower
       
@@ -28,10 +34,6 @@ def NBgausNormal( gpa ):
 
 if __name__ == '__main__':
 
-   #gpa = sys.argv[1]
-   #ap = sys.argv[2]
-   #nh = sys.argv[3]
-   
    # Honors, AP
    hap = float(2)/3
    # Honors, no AP
@@ -45,21 +47,26 @@ if __name__ == '__main__':
    # Honors
    pho = float(3)/9
    # Normal
-   nho = float(5)/9
+   nho = float(6)/9
    
+   # Honors with AP
+   # Math result: [1.67829, 3.21982]
    for val in xrange(1,420):
       gpa = float(val)/100
       if (pho * NBgausHonor( gpa ) * hap) > (nho * NBgausNormal( gpa ) * nap ):
-         print gpa, " GPA Honors**, AP Yes"
+         print gpa, ": Yes AP, Honors"
       else:
-         print gpa, " GPA Normal, AP Yes"
+         print gpa, ": Yes AP, Normal"
          
    print "\n\n"
+   
+   # Honors without AP
+   #Math result: [1.75831, 3.1398]
    for val in xrange(1,420):
       gpa = float(val)/100
       if (pho * NBgausHonor( gpa ) * hno) > (nho * NBgausNormal( gpa ) * nno ):
-         print gpa, " GPA Honors**, AP No"
+         print gpa, " No  AP, Honors"
       else:
-         print gpa, " GPA Normal, AP No"
-      
+         print gpa, " No  AP, Normal"
+         
    
