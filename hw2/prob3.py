@@ -47,16 +47,16 @@ if __name__ == '__main__':
    # Normal
    nho = float(5)/9
    
-   for val in xrange(1,4200):
-      gpa = float(val)/1000
+   for val in xrange(1,420):
+      gpa = float(val)/100
       if (pho * NBgausHonor( gpa ) * hap) > (nho * NBgausNormal( gpa ) * nap ):
          print gpa, " GPA Honors**, AP Yes"
       else:
          print gpa, " GPA Normal, AP Yes"
          
    print "\n\n"
-   for val in xrange(1,42):
-      gpa = float(val)/10
+   for val in xrange(1,420):
+      gpa = float(val)/100
       if (pho * NBgausHonor( gpa ) * hno) > (nho * NBgausNormal( gpa ) * nno ):
          print gpa, " GPA Honors**, AP No"
       else:

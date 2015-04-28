@@ -126,8 +126,46 @@
   	\end{enumerate}
   	
   	\item Naive Bayes \\
-  		In order to predict $\textbf{H}$ 
-  	
+  		In order to predict Honors status, $H$, for students who have taken AP courses we look at 
+  		\begin{align*}
+  			P(H \mid AP, GPA) &= \frac{P(AP \mid H) P(GPA \mid H) P(H)}{P(AP,GPA)}.
+  		\end{align*}
+  		Specifically, in order to predict $H$ from GPA data, we find the GPA values which make the following true.
+  		\begin{align*}
+  		\frac{P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H})}{P(AP,GPA)} > \frac{P(AP \mid H) P(GPA \mid H) P(H)}{P(AP,GPA)}
+  		\end{align*} 
+  		In solving for the GPA value, we can multiply both side of the inequality by the shared denominator and get the same GPA range by looking at 
+  		\begin{align*}
+  		P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H}) > P(AP \mid H) P(GPA \mid H) P(H) \Longleftrightarrow \\
+  		0 > P(AP \mid H) P(GPA \mid H) P(H) - \left( P(AP \mid \overline{H}) P(GPA \mid \overline{H}) P(\overline{H}) \right) 
+  		\end{align*}
+  		The following table can be used to fill out and solve this inequality.\\ \\
+  		\begin{tabular}{l l}
+  			\textbf{Expression} & \textbf{Equivalent} \\
+  			$P(AP \mid H)$ & $2/3$ \\
+  			$P(AP \mid \overline{H})$ & $2/6$ \\
+  			$P(H)$ & $3/8$ \\
+  			$P(\overline{H})$ & $5/8$ \\
+  			$P(GPA \mid H)$ & $\frac{1}{\sqrt{2\pi\sigma_{H}^2}} e^{- \frac{(GPA - \mu_{H})^2}{2\sigma_{H}^2}} $ \\  	
+  			$\mu_{H}$ & $3.4$ \\		
+  			$\sigma_{H}^2$ & $0.63$ \\
+  			$P(GPA \mid \overline{H})$ & $\frac{1}{\sqrt{2\pi\sigma_{\overline{H}}^2}} e^{- \frac{(GPA - \mu_{\overline{H}})^2}{2\sigma_{\overline{H}}^2}} $ \\
+  			$\mu_{\overline{H}}$ & $3.083$ \\
+  			$\sigma_{\overline{H}}^2$ & $0.1737$ \\
+  		\end{tabular} \\ \\
+  		After filling out and solving the inequality for GPA, we find that we can predict: \\
+  		If AP courses are taken, predict $H$ if the GPA is between $2.891$ and $3.223$**. \\ \\
+  		
+  		Evaluating honors status when AP courses are not taken can be done with very similar calculations, however $AP$ need to be replaced with $\overline{AP}$ and the following values should be used: \\ \\
+  		\begin{tabular}{l l}
+			\textbf{Expression} & \textbf{Equivalent} \\
+	 		$P(\overline{AP} \mid H )$ & $1/3$ \\
+	 		$P(\overline{AP} \mid \overline{H} )$ & $4/6$ \\
+  		\end{tabular} \\ \\
+  		Now we can say: \\
+  		If AP courses are not taken, predict $H$ if the GPA is between $2.882$ and $3.231$**. \\ \\
+  		** Note: These are the value we received after simplifying the expression by hand into quadratic from, and using wolframalpha.com to solve the quadratic equation. When we used code to iterate across all possible GPA values, the results were different. From the code, our results were: If AP, honors for GPAs in $[0.01, 2.43]\cup[3.49, 4.00]$. If no AP, honors for GPAs in $[0.01, 1.99]\cup[3.94, 4.00]$.
+  		
   	\item Expected Value \\
 	  	\begin{align*}
 		  	E[XY] &= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}X_i Y_iP(X_i,Y_i) \\
