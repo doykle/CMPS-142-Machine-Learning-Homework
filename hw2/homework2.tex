@@ -84,7 +84,7 @@
 	 	  		\textbf{0.3}: Accuracy is 77.2\% correctly classified. The weights decrease a little, which is expected because a penalty on increasing the weights was introduced. However, the weights are similar enough that the accuracy was not affected. \\
 	 	  		\textbf{2.0}: Accuracy is 77.1\%. Increasing the ridge value to 2.0 was enough to have a small affect on the accuracy. 
 	 \item[(f)] KNN: \\
-	 			\textbf{Prediction}: 3NN or 5NN will perform better than 1NN. With this data set, most of the attributes have ranges in which data with different classifications overlap. With 1NN, an outlier data point could easily cause the misclassification of test data, simply by the grace of that outlier being the closest to the test data. By basing classification on a larger number of neighbors, the 3NN and 5NN algorithms reduce the influence of outlier data points.  
+	 			\textbf{Prediction}: 3NN or 5NN will perform better than 1NN. With this data set, most of the attributes have ranges in which data with different classifications overlap. With 1NN, an outlier data point could easily cause the misclassification of test data, simply by the grace of that outlier being the closest to the test data. By basing classification on a larger number of neighbors, the 3NN and 5NN algorithms reduce the influence of outlier data points.  \\
 	 			\textbf{Results}: 1NN had 70.2\% accuracy. 3NN had 72.7\% accuracy. 5NN had 73.2\% accuracy.  \\
 	 \item[(g)] Copies of \textit{pres}: \\
 	 	\textbf{Expected}:  For nearest neighbors, adding copy's of an attribute weights the distance from that attribute on a training instance to a test instance heavier, so the algorithm will favor instances who are closer in that attribute. This will affect the prediction and therefore the accuracy. If somehow we were to get lucky and the attribute we picked was more accurate and more fully characterized than the others, this could increase accuracy, otherwise you would expect it to go down.\\
@@ -147,8 +147,8 @@
   			\textbf{Expression} & \textbf{Equivalent} \\
   			$P(AP \mid H)$ & $2/3$ \\
   			$P(AP \mid \overline{H})$ & $2/6$ \\
-  			$P(H)$ & $3/8$ \\
-  			$P(\overline{H})$ & $5/8$ \\
+  			$P(H)$ & $3/9$ \\
+  			$P(\overline{H})$ & $5/9$ \\
   			$P(GPA \mid H)$ & $\frac{1}{\sqrt{2\pi\sigma_{H}^2}} e^{- \frac{(GPA - \mu_{H})^2}{2\sigma_{H}^2}} $ \\  	
   			$\mu_{H}$ & $3.4$ \\		
   			$\sigma_{H}^2$ & $0.42$ \\
