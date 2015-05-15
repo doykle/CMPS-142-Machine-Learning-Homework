@@ -1,13 +1,13 @@
 # Test file for processing.py
 
 from __future__ import print_function
-
 import numpy as np
 
 import processing as proc
 
 def test_convert_gender():
    """
+   expected output:
    1
    0
    2
@@ -19,6 +19,7 @@ def test_convert_gender():
 
 def test_convert_language():
    """
+   expected output:
    2
    1
    0

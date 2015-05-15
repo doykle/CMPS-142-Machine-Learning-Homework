@@ -25,13 +25,28 @@ def convert_language( s ):
 def get_dataset( filename ):
 
    dataset = np.genfromtxt(filename, delimiter = ',', names = True,
-                     converters = {'gender': lambda s: convert_gender(s), 
-                     'FirstLang': lambda s: convert_language(s)})
-
+                           converters = {'gender': lambda s: convert_gender(s), 
+                           'FirstLang': lambda s: convert_language(s)}
+                           )
+                           
    return dataset
    
-def split_dataset( dataset ): 
-   pass
+   
+def break_off_labels( dataset ): 
+   
+   labels = np.zeros(len(dataset['gender']), dtype=[('gpaunits', '<f8'),
+                                                    ('units', '<f8'),
+                                                    ('gpa', '<f8')
+                                                    ])
+   
+   labels['gpa']      = dataset['Firstyrcumgpa'].copy()
+   labels['units']    = dataset['Firststyeartotcumunits'].copy()
+   labels['gpaunits'] = dataset['Firststyrunitsforgpa'].copy()
+   
+   #instances = np.delete(dataset, 'Firstyrcumgpa', 1)
+   
+      
+      
    
    
 if __name__ == '__main__':
@@ -43,14 +58,13 @@ if __name__ == '__main__':
    args = parser.parse_args()
    filename = args.file
    action = args.action
+
    
    # Get the data set
    # dataset is an indexable dictionary 
    dataset = get_dataset( filename )
    
-   split_dataset( dataset )
+   break_off_labels( dataset )
                      
-   print(dataset[:2])
-                     
-   
+   print(dataset.dtype)
    
