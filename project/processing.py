@@ -22,31 +22,22 @@ def convert_language( s ):
       return 0
    
    
-def get_dataset( filename ):
+def get_data( filename ):
 
+   labels = np.genfromtxt(filename, delimiter = ',', names = True,
+                           usecols=xrange(15,18) )
+                           
+   instances = np.genfromtxt(filename, delimiter = ',', names = True,
+                           converters = {'gender': lambda s: convert_gender(s), 
+                           'FirstLang': lambda s: convert_language(s)},
+                           usecols=xrange(15) )
+                           
    dataset = np.genfromtxt(filename, delimiter = ',', names = True,
                            converters = {'gender': lambda s: convert_gender(s), 
                            'FirstLang': lambda s: convert_language(s)}
-                           )
+                            )
                            
-   return dataset
-   
-   
-def break_off_labels( dataset ): 
-   
-   labels = np.zeros(len(dataset['gender']), dtype=[('gpaunits', '<f8'),
-                                                    ('units', '<f8'),
-                                                    ('gpa', '<f8')
-                                                    ])
-   
-   labels['gpa']      = dataset['Firstyrcumgpa'].copy()
-   labels['units']    = dataset['Firststyeartotcumunits'].copy()
-   labels['gpaunits'] = dataset['Firststyrunitsforgpa'].copy()
-   
-   #instances = np.delete(dataset, 'Firstyrcumgpa', 1)
-   
-      
-      
+   return dataset, instances, labels
    
    
 if __name__ == '__main__':
@@ -60,11 +51,8 @@ if __name__ == '__main__':
    action = args.action
 
    
-   # Get the data set
-   # dataset is an indexable dictionary 
-   dataset = get_dataset( filename )
+   # Get the full data set, instances, and labels.
+   dataset, instances, labels = get_data( filename )
    
-   break_off_labels( dataset )
-                     
-   print(dataset.dtype)
+
    
