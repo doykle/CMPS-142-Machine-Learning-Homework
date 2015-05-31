@@ -1,7 +1,11 @@
 from __future__ import print_function
 
+import sys
+import math
 import argparse
 import numpy as np
+from operator import itemgetter
+from sklearn.cluster import KMeans
 
 
 def convert_gender( s ):
@@ -52,8 +56,40 @@ def get_data( filename ):
 def generate_labels( outcomes ):
    """
    Use KMeans clustering to find a lowest performing group and label them as failures for life
-   """
    
+   2015/5/31: nan values are being counted as pass
+   """
+   print( outcomes[0] )
+   # Create array of just GPA data
+   gpas = [ [gpa] for gpaunits, cumunits, gpa in outcomes ]
+   
+   # Replace nan with 13, so that all nan will be given their own cluster
+   # Keep track of where the nan are, so that we can verify their cluster (TEST)
+   for idx,gpa in enumerate( gpas ):
+      if math.isnan( gpa[0] ):
+         gpas[idx] = [np.float64( 13 )]
+
+   # Fit the clusters
+   cluster_count = 3
+   kmeans = KMeans( n_clusters = cluster_count )
+   kmeans_gpa = kmeans.fit( gpas )
+   
+   # Creates ( label, GPA ) list
+   label_gpa = zip( kmeans_gpa.labels_, gpas ) 
+   
+   # Which number corresponds to the lowest GPAs?
+   min_label = min( label_gpa, key=itemgetter(1) )[0]
+   
+   # Change numeric labels to min == "fail" and not min == "pass"
+   for idx,(label,gpa) in enumerate( label_gpa ):
+      if label == min_label:
+         label_gpa[idx] = ( "fail", gpa )
+      else:
+         label_gpa[idx] = ( "pass", gpa )
+
+   labels = [ label for label,gpa in label_gpa ]
+
+   return labels
 
    
 if __name__ == '__main__':
