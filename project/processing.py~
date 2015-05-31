@@ -5,9 +5,6 @@ import numpy as np
 
 
 def convert_gender( s ):
-   """
-   Turn string 'gender' attribute into int
-   """
    if s == 'Female':
       return 1
    elif s == 'Male':
@@ -15,11 +12,8 @@ def convert_gender( s ):
    else:
       return 2
       
-
+  
 def convert_language( s ):
-   """
-   Turn string 'language' attribute into int
-   """
    if s == 'EnglishandAnother':
       return 2
    elif s == 'English':
@@ -27,12 +21,9 @@ def convert_language( s ):
    else:
       return 0
    
-
+   
 def get_data( filename ):
-   """
-   Extract the full dataset, once as an entire set, and again 
-   as separate instances,labels
-   """
+
    labels = np.genfromtxt(filename, delimiter = ',', names = True,
                            usecols=xrange(15,18) )
                            
