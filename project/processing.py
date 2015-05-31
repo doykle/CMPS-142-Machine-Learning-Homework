@@ -33,7 +33,7 @@ def get_data( filename ):
    Extract the full dataset, once as an entire set, and again 
    as separate instances,labels
    """
-   labels = np.genfromtxt(filename, delimiter = ',', names = True,
+   outcomes = np.genfromtxt(filename, delimiter = ',', names = True,
                            usecols=xrange(15,18) )
                            
    instances = np.genfromtxt(filename, delimiter = ',', names = True,
@@ -46,8 +46,15 @@ def get_data( filename ):
                            'FirstLang': lambda s: convert_language(s)}
                             )
                            
-   return dataset, instances, labels
+   return dataset, instances, outcomes
    
+
+def generate_labels( outcomes ):
+   """
+   Use KMeans clustering to find a lowest performing group and label them as failures for life
+   """
+   
+
    
 if __name__ == '__main__':
    parser = argparse.ArgumentParser()
@@ -60,8 +67,17 @@ if __name__ == '__main__':
    action = args.action
 
    
-   # Get the full data set, instances, and labels.
-   dataset, instances, labels = get_data( filename )
+   # Get the full data set, instances, and outcomes.
+   dataset, instances, outcomes = get_data( filename )
+
+   # Generate labels array from the outcome data
+   labels = generate_labels( outcomes )
+
+   # Split data into training and dev sets
+
+   # Classify the training set
+
+   # Evaluate the classification
    
 
    
