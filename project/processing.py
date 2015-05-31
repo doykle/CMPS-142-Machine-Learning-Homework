@@ -9,6 +9,7 @@ from sklearn.cluster import KMeans
 from sklearn.cross_validation import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import Imputer
+from sklearn.dummy import DummyClassifier
 
 
 def convert_gender( s ):
@@ -113,12 +114,17 @@ def NBclassify( instances, labels ):
    return classifier
    
    
-def evaluate( clf, instances, labels ):
+def evaluate( clf, dumb_clf, instances, labels ):
    """
    Evaluate the classifier
    """
    
-   print( clf.score(instances, labels) )
+
+   baseline = dumb_clf.score( instances, labels )
+   print( "Baseline: ", baseline )
+   
+   print( "Naive Bayes: ", clf.score(instances, labels) )
+
    
 if __name__ == '__main__':
    parser = argparse.ArgumentParser()
@@ -146,8 +152,12 @@ if __name__ == '__main__':
    
    # Classify the training set
    classifier = NBclassify( instance_train, labels_train )
+   
+   # Baseline
+   baseline = DummyClassifier( strategy='uniform' )
+   dumb_clf = baseline.fit( instance_train, labels_train )
 
    # Evaluate the classification
-   evaluate( classifier, instance_test, labels_test )
+   evaluate( classifier, dumb_clf, instance_test, labels_test )
 
    
