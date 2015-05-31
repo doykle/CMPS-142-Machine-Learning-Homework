@@ -11,6 +11,10 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import Imputer
 from sklearn.dummy import DummyClassifier
 
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+
+
 
 def convert_gender( s ):
    """
@@ -63,6 +67,12 @@ def get_data( filename ):
                            
    return dataset, instances, outcomes
    
+   
+def visualize( km, n_clusters, X, y ):
+ 
+   fig = plt.figure()
+   plt.plot( X, y, 'ro')
+   plt.show()
 
 def generate_labels( outcomes ):
    """
@@ -81,15 +91,21 @@ def generate_labels( outcomes ):
          gpas[idx] = [np.float64( 13 )]
 
    # Fit the clusters
-   cluster_count = 3
+   cluster_count = 4
    kmeans = KMeans( n_clusters = cluster_count )
    kmeans_gpa = kmeans.fit( gpas )
+   
+   
    
    # Creates ( label, GPA ) list
    label_gpa = zip( kmeans_gpa.labels_, gpas ) 
    
+   #visualize( kmeans, cluster_count, gpas, kmeans_gpa.labels_ )
+   
    # Which number corresponds to the lowest GPAs?
    min_label = min( label_gpa, key=itemgetter(1) )[0]
+   
+   # DBUG find threshold between pass/fail?
    
    # Change numeric labels to min == "fail" and not min == "pass"
    for idx,(label,gpa) in enumerate( label_gpa ):
