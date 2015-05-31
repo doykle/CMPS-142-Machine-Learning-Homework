@@ -6,6 +6,9 @@ import argparse
 import numpy as np
 from operator import itemgetter
 from sklearn.cluster import KMeans
+from sklearn.cross_validation import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.preprocessing import Imputer
 
 
 def convert_gender( s ):
@@ -44,6 +47,13 @@ def get_data( filename ):
                            converters = {'gender': lambda s: convert_gender(s), 
                            'FirstLang': lambda s: convert_language(s)},
                            usecols=xrange(15) )
+   
+   # Fix the instances weirdness
+   instance_list = []
+   for idx,instance in enumerate(instances):
+      instance_list.append( [ value for value in instance ] ) 
+   bandaid = Imputer( strategy='median' )
+   instances = bandaid.fit_transform( instance_list )
                            
    dataset = np.genfromtxt(filename, delimiter = ',', names = True,
                            converters = {'gender': lambda s: convert_gender(s), 
@@ -59,7 +69,7 @@ def generate_labels( outcomes ):
    
    2015/5/31: nan values are being counted as pass
    """
-   print( outcomes[0] )
+
    # Create array of just GPA data
    gpas = [ [gpa] for gpaunits, cumunits, gpa in outcomes ]
    
@@ -92,6 +102,24 @@ def generate_labels( outcomes ):
    return labels
 
    
+def NBclassify( instances, labels ):
+   """
+   Create a naive bayes classifier from the input data
+   """
+   clf = GaussianNB()
+  
+   classifier = clf.fit( instances, labels )
+   
+   return classifier
+   
+   
+def evaluate( clf, instances, labels ):
+   """
+   Evaluate the classifier
+   """
+   
+   print( clf.score(instances, labels) )
+   
 if __name__ == '__main__':
    parser = argparse.ArgumentParser()
    parser.add_argument("--file", help="the name of the data file to process",
@@ -110,10 +138,16 @@ if __name__ == '__main__':
    labels = generate_labels( outcomes )
 
    # Split data into training and dev sets
-
+   size_of_test_set = 0.2
+   instance_train, instance_test, labels_train, labels_test =\
+      train_test_split( instances, labels, test_size = size_of_test_set )
+   
+   assert len(instance_train) == len(labels_train) and len(instance_test) == len(labels_test)
+   
    # Classify the training set
+   classifier = NBclassify( instance_train, labels_train )
 
    # Evaluate the classification
-   
+   evaluate( classifier, instance_test, labels_test )
 
    
