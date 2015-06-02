@@ -1,3 +1,21 @@
+"""
+Development notes:
+
+Currently cannot remove instances which have no GPA data,
+because the instances are in a separate array. Or can I?
+Where can this be done?
+
+Things to do:
+   Balance the training data
+   
+   Conditional Frequency
+   
+   Separating by ACT and SAT (or generally separating by data presence)
+
+"""
+
+
+
 from __future__ import print_function
 
 import sys
@@ -60,13 +78,6 @@ def get_data( filename ):
                            converters = {'gender': lambda s: convert_gender(s), 
                            'FirstLang': lambda s: convert_language(s)},
                            usecols=xrange(15) )
-   
-   # Fix the instances weirdness
-   instance_list = []
-   for idx,instance in enumerate(instances):
-      instance_list.append( [ value for value in instance ] ) 
-   bandaid = Imputer( strategy='median' )
-   instances = bandaid.fit_transform( instance_list )
                            
    dataset = np.genfromtxt(filename, delimiter = ',', names = True,
                            converters = {'gender': lambda s: convert_gender(s), 
@@ -75,6 +86,19 @@ def get_data( filename ):
                            
    return dataset, instances, outcomes
    
+
+def data_organizer( instances, outcomes ):
+   """
+   Operations to organize data as desired
+   """
+   # Fill in NaN values with median
+   instance_list = []
+   for idx,instance in enumerate(instances):
+      instance_list.append( [ value for value in instance ] ) 
+   bandaid = Imputer( strategy='median' )
+   instances = bandaid.fit_transform( instance_list )
+   
+   return instances, outcomes
    
 def visualize( km, n_clusters, X, y ):
  
@@ -86,7 +110,7 @@ def generate_labels( outcomes ):
    """
    Use KMeans clustering to find a lowest performing group and label them as failures for life
    
-   2015/5/31: nan values are being counted as pass
+   2015/5/31: nan GPA values are being counted as pass
    """
 
    # Create array of just GPA data
@@ -146,7 +170,18 @@ def evaluate( clf, dumb_clf, instances, labels ):
 
    baseline = dumb_clf.score( instances, labels )
    print( "Baseline: ", baseline )
+   prediction_array = dumb_clf.predict( instances )
+   conf_mat = confusion_matrix( labels, prediction_array )
+   class_report = classification_report( labels, prediction_array,\
+                     target_names=target_names)
+                     
+   print( "Classification report:\n", class_report )
    
+   print( "Confusion Matrix:\n", conf_mat )   
+   
+   print( "\n\n" )
+   
+   print( "Naive Bayes: ", clf.score(instances, labels) )
    prediction_array = clf.predict( instances )
    conf_mat = confusion_matrix( labels, prediction_array )
    class_report = classification_report( labels, prediction_array,\
@@ -155,8 +190,6 @@ def evaluate( clf, dumb_clf, instances, labels ):
    print( "Classification report:\n", class_report )
    
    print( "Confusion Matrix:\n", conf_mat )
-   print( "Naive Bayes: ", clf.score(instances, labels) )
-
    
 if __name__ == '__main__':
    parser = argparse.ArgumentParser()
@@ -171,12 +204,15 @@ if __name__ == '__main__':
    
    # Get the full data set, instances, and outcomes.
    dataset, instances, outcomes = get_data( filename )
+   
+   # Organize the data
+   instances, outcomes = data_organizer( instances, outcomes )
 
    # Generate labels array from the outcome data
    labels = generate_labels( outcomes )
 
    # Split data into training and dev sets
-   size_of_test_set = 0.2
+   size_of_test_set = 0.3
    instance_train, instance_test, labels_train, labels_test =\
       train_test_split( instances, labels, test_size = size_of_test_set )
    
