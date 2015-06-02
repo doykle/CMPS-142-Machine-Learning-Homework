@@ -5,11 +5,19 @@ import math
 import argparse
 import numpy as np
 from operator import itemgetter
+
+# Unsupervised Clusters
 from sklearn.cluster import KMeans
+# Separation of training into training/test set
 from sklearn.cross_validation import train_test_split
+# Gaussian Naive Bayes classification
 from sklearn.naive_bayes import GaussianNB
+# Fill in missing values. Handles NaN values by filling in values
 from sklearn.preprocessing import Imputer
+# Calculates baseline for classification
 from sklearn.dummy import DummyClassifier
+# Calculate/display evaluation metrics
+from sklearn.metrics import confusion_matrix, classification_report
 
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -134,11 +142,19 @@ def evaluate( clf, dumb_clf, instances, labels ):
    """
    Evaluate the classifier
    """
-   
+   target_names = ['fail', 'pass']
 
    baseline = dumb_clf.score( instances, labels )
    print( "Baseline: ", baseline )
    
+   prediction_array = clf.predict( instances )
+   conf_mat = confusion_matrix( labels, prediction_array )
+   class_report = classification_report( labels, prediction_array,\
+                     target_names=target_names)
+                     
+   print( "Classification report:\n", class_report )
+   
+   print( "Confusion Matrix:\n", conf_mat )
    print( "Naive Bayes: ", clf.score(instances, labels) )
 
    
