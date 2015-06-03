@@ -91,6 +91,20 @@ def data_organizer( instances, outcomes ):
    """
    Operations to organize data as desired
    """
+   
+   # Remove instances without GPA data
+   new_instances = []
+   new_outcomes = []
+   for instance,outcome in zip(instances,outcomes):
+      u1,u2,gpa = outcome
+      if not math.isnan( gpa ):
+         new_instances.append( [value for value in instance] )
+         new_outcomes.append( [value for value in outcome] )
+         
+   instances = new_instances
+   outcomes = new_outcomes
+  
+  
    # Fill in NaN values with median
    instance_list = []
    for idx,instance in enumerate(instances):
@@ -98,6 +112,7 @@ def data_organizer( instances, outcomes ):
    bandaid = Imputer( strategy='median' )
    instances = bandaid.fit_transform( instance_list )
    
+
    return instances, outcomes
    
 def visualize( km, n_clusters, X, y ):
@@ -208,9 +223,11 @@ if __name__ == '__main__':
    # Organize the data
    instances, outcomes = data_organizer( instances, outcomes )
 
+   assert len(instances) == len(outcomes)
+   
    # Generate labels array from the outcome data
    labels = generate_labels( outcomes )
-
+   
    # Split data into training and dev sets
    size_of_test_set = 0.3
    instance_train, instance_test, labels_train, labels_test =\
