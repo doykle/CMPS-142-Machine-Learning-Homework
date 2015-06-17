@@ -1,0 +1,58 @@
+SAT subject tests and HSGPA
+below threshold:  1228  above:  1292
+TRAINING EVAL
+Baseline:  0.507142857143
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.49      0.49      0.49       612
+    class 2       0.52      0.52      0.52       648
+
+avg / total       0.51      0.51      0.51      1260
+
+Confusion Matrix:
+ [[301 311]
+ [310 338]]
+
+
+
+Trained Classifier:  0.627777777778
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.63      0.55      0.59       612
+    class 2       0.62      0.70      0.66       648
+
+avg / total       0.63      0.63      0.63      1260
+
+Confusion Matrix:
+ [[339 273]
+ [196 452]]
+TEST EVAL
+Baseline:  0.497619047619
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.48      0.48      0.48       616
+    class 2       0.50      0.50      0.50       644
+
+avg / total       0.49      0.49      0.49      1260
+
+Confusion Matrix:
+ [[295 321]
+ [323 321]]
+
+
+
+Trained Classifier:  0.607936507937
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.61      0.55      0.58       616
+    class 2       0.61      0.66      0.63       644
+
+avg / total       0.61      0.61      0.61      1260
+
+Confusion Matrix:
+ [[339 277]
+ [217 427]]

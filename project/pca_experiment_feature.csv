@@ -1,0 +1,7 @@
+Using all features
+below threshold:  319  above:  350
+Using all features
+Using all features
+> c:\users\kevin\documents\github\cmps142\project\experiment_processing.py(583)<module>()
+-> print( instance_train, labels_train )
+(Pdb) 

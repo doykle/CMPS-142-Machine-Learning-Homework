@@ -1,0 +1,1048 @@
+Using all features
+below threshold:  319  above:  350
+training size:  20
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=13, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 13} with a score of 0.80
+training size:  25
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.76
+training size:  30
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=7, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 7} with a score of 0.67
+training size:  35
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.66
+training size:  40
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.60
+training size:  45
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.64
+training size:  50
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.62
+training size:  55
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.64
+training size:  60
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.62
+training size:  65
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.63
+training size:  70
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.64
+training size:  75
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.61
+training size:  80
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.62
+training size:  85
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.62
+training size:  90
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.61
+training size:  95
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=6, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 6} with a score of 0.65
+training size:  100
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.63
+training size:  105
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.64
+training size:  110
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=6, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 6} with a score of 0.65
+training size:  115
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.66
+training size:  120
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.67
+training size:  125
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.67
+training size:  130
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.66
+training size:  135
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.69
+training size:  140
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=12, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 12} with a score of 0.66
+training size:  145
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.66
+training size:  150
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.67
+training size:  155
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.66
+training size:  160
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.66
+training size:  165
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.67
+training size:  170
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.68
+training size:  175
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.67
+training size:  180
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.66
+training size:  185
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.68
+training size:  190
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.69
+training size:  195
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.70
+training size:  200
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.68
+training size:  205
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.68
+training size:  210
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.69
+training size:  215
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.68
+training size:  220
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.67
+training size:  225
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.66
+training size:  230
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.66
+training size:  235
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.66
+training size:  240
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.65
+training size:  245
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.65
+training size:  250
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.65
+training size:  255
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=1, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 1} with a score of 0.65
+training size:  260
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.65
+training size:  265
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  270
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  275
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.68
+training size:  280
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=5, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 5} with a score of 0.67
+training size:  285
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 8} with a score of 0.66
+training size:  290
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.67
+training size:  295
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  300
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.67
+training size:  305
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=6, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 6} with a score of 0.66
+training size:  310
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 8} with a score of 0.65
+training size:  315
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.65
+training size:  320
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  325
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=2, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 2} with a score of 0.65
+training size:  330
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.67
+training size:  335
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  340
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  345
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  350
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  355
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.65
+training size:  360
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  365
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.65
+training size:  370
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  375
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  380
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  385
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  390
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  395
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.66
+training size:  400
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  405
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  410
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.66
+training size:  415
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.67
+training size:  420
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.66
+training size:  425
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.66
+training size:  430
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.67
+training size:  435
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.66
+training size:  440
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.66
+training size:  445
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.67
+training size:  450
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.67
+training size:  455
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=3, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 3} with a score of 0.67
+training size:  460
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.67
+training size:  465
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.67
+training size:  470
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.67
+training size:  475
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.67
+training size:  480
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=10, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 10} with a score of 0.66
+training size:  485
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+training size:  490
+GridSearchCV(cv=10, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', GaussianNB())]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 10 folds for each of 14 candidates, totalling 140 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=4, whiten=False)), ('svm', GaussianNB())])
+The best parameters are {'pca__n_components': 4} with a score of 0.66
+train_data_percent,test_data_percent,train_instance_count,,clf_train_acc,clf_test_acc,base_train_acc,base_test_acc
+0.04,0.96,20,,0.95,0.577380952381,0.7,0.452380952381
+0.05,0.95,25,,0.8,0.458333333333,0.48,0.482142857143
+0.06,0.94,30,,0.933333333333,0.559523809524,0.466666666667,0.505952380952
+0.07,0.93,35,,0.685714285714,0.428571428571,0.542857142857,0.511904761905
+0.08,0.92,40,,0.65,0.5,0.425,0.464285714286
+0.09,0.91,45,,0.644444444444,0.517857142857,0.488888888889,0.410714285714
+0.1,0.9,50,,0.62,0.60119047619,0.48,0.470238095238
+0.11,0.89,55,,0.654545454545,0.613095238095,0.454545454545,0.470238095238
+0.12,0.88,60,,0.633333333333,0.613095238095,0.516666666667,0.470238095238
+0.13,0.87,65,,0.661538461538,0.619047619048,0.461538461538,0.494047619048
+0.14,0.86,70,,0.657142857143,0.607142857143,0.514285714286,0.517857142857
+0.15,0.85,75,,0.64,0.619047619048,0.533333333333,0.529761904762
+0.16,0.84,80,,0.625,0.625,0.5,0.505952380952
+0.17,0.83,85,,0.623529411765,0.636904761905,0.470588235294,0.5
+0.18,0.82,90,,0.611111111111,0.619047619048,0.422222222222,0.464285714286
+0.19,0.81,95,,0.631578947368,0.613095238095,0.463157894737,0.482142857143
+0.2,0.8,100,,0.63,0.625,0.5,0.511904761905
+0.21,0.79,105,,0.647619047619,0.619047619048,0.485714285714,0.494047619048
+0.22,0.78,110,,0.663636363636,0.619047619048,0.445454545455,0.553571428571
+0.23,0.77,115,,0.704347826087,0.636904761905,0.513043478261,0.428571428571
+0.24,0.76,120,,0.691666666667,0.625,0.575,0.47619047619
+0.25,0.75,125,,0.672,0.630952380952,0.504,0.440476190476
+0.26,0.74,130,,0.661538461538,0.613095238095,0.523076923077,0.470238095238
+0.27,0.73,135,,0.748148148148,0.571428571429,0.518518518519,0.488095238095
+0.28,0.72,140,,0.742857142857,0.583333333333,0.528571428571,0.488095238095
+0.29,0.71,145,,0.655172413793,0.630952380952,0.537931034483,0.559523809524
+0.3,0.7,150,,0.693333333333,0.619047619048,0.5,0.482142857143
+0.31,0.69,155,,0.658064516129,0.630952380952,0.574193548387,0.565476190476
+0.32,0.68,160,,0.65625,0.607142857143,0.5,0.511904761905
+0.33,0.67,165,,0.666666666667,0.630952380952,0.49696969697,0.505952380952
+0.34,0.66,170,,0.670588235294,0.625,0.476470588235,0.494047619048
+0.35,0.65,175,,0.668571428571,0.636904761905,0.468571428571,0.52380952381
+0.36,0.64,180,,0.661111111111,0.619047619048,0.516666666667,0.52380952381
+0.37,0.63,185,,0.697297297297,0.630952380952,0.508108108108,0.470238095238
+0.38,0.62,190,,0.736842105263,0.595238095238,0.494736842105,0.541666666667
+0.39,0.61,195,,0.74358974359,0.60119047619,0.507692307692,0.47619047619
+0.4,0.6,200,,0.675,0.636904761905,0.545,0.47619047619
+0.41,0.59,205,,0.678048780488,0.630952380952,0.521951219512,0.5
+0.42,0.58,210,,0.680952380952,0.625,0.514285714286,0.410714285714
+0.43,0.57,215,,0.706976744186,0.625,0.544186046512,0.505952380952
+0.44,0.56,220,,0.672727272727,0.630952380952,0.481818181818,0.470238095238
+0.45,0.55,225,,0.68,0.613095238095,0.546666666667,0.446428571429
+0.46,0.54,230,,0.660869565217,0.613095238095,0.495652173913,0.494047619048
+0.47,0.53,235,,0.663829787234,0.607142857143,0.51914893617,0.505952380952
+0.48,0.52,240,,0.65,0.636904761905,0.5125,0.5
+0.49,0.51,245,,0.65306122449,0.636904761905,0.538775510204,0.547619047619
+0.5,0.5,250,,0.656,0.636904761905,0.48,0.482142857143
+0.51,0.49,255,,0.650980392157,0.636904761905,0.521568627451,0.482142857143
+0.52,0.48,260,,0.669230769231,0.625,0.546153846154,0.547619047619
+0.53,0.47,265,,0.679245283019,0.630952380952,0.532075471698,0.494047619048
+0.54,0.46,270,,0.677777777778,0.636904761905,0.444444444444,0.434523809524
+0.55,0.45,275,,0.68,0.619047619048,0.465454545455,0.559523809524
+0.56,0.44,280,,0.692857142857,0.619047619048,0.507142857143,0.52380952381
+0.57,0.43,285,,0.708771929825,0.613095238095,0.533333333333,0.464285714286
+0.58,0.42,290,,0.675862068966,0.630952380952,0.5,0.440476190476
+0.59,0.41,295,,0.684745762712,0.630952380952,0.535593220339,0.488095238095
+0.6,0.4,300,,0.67,0.636904761905,0.496666666667,0.47619047619
+0.61,0.39,305,,0.675409836066,0.607142857143,0.47868852459,0.511904761905
+0.62,0.38,310,,0.690322580645,0.60119047619,0.529032258065,0.464285714286
+0.63,0.37,315,,0.657142857143,0.613095238095,0.565079365079,0.488095238095
+0.64,0.36,320,,0.671875,0.613095238095,0.515625,0.505952380952
+0.65,0.35,325,,0.652307692308,0.607142857143,0.470769230769,0.452380952381
+0.66,0.34,330,,0.681818181818,0.619047619048,0.481818181818,0.488095238095
+0.67,0.33,335,,0.662686567164,0.613095238095,0.474626865672,0.577380952381
+0.68,0.32,340,,0.664705882353,0.595238095238,0.508823529412,0.5
+0.69,0.31,345,,0.669565217391,0.60119047619,0.501449275362,0.482142857143
+0.7,0.3,350,,0.665714285714,0.595238095238,0.46,0.517857142857
+0.71,0.29,355,,0.661971830986,0.60119047619,0.47323943662,0.482142857143
+0.72,0.28,360,,0.663888888889,0.607142857143,0.536111111111,0.511904761905
+0.73,0.27,365,,0.668493150685,0.595238095238,0.460273972603,0.488095238095
+0.74,0.26,370,,0.664864864865,0.607142857143,0.472972972973,0.464285714286
+0.75,0.25,375,,0.674666666667,0.613095238095,0.461333333333,0.434523809524
+0.76,0.24,380,,0.665789473684,0.630952380952,0.523684210526,0.446428571429
+0.77,0.23,385,,0.65974025974,0.630952380952,0.498701298701,0.535714285714
+0.78,0.22,390,,0.666666666667,0.630952380952,0.476923076923,0.428571428571
+0.79,0.21,395,,0.660759493671,0.625,0.448101265823,0.446428571429
+0.8,0.2,400,,0.6675,0.625,0.525,0.47619047619
+0.81,0.19,405,,0.674074074074,0.630952380952,0.555555555556,0.559523809524
+0.82,0.18,410,,0.680487804878,0.619047619048,0.517073170732,0.529761904762
+0.83,0.17,415,,0.667469879518,0.630952380952,0.448192771084,0.5
+0.84,0.16,420,,0.685714285714,0.619047619048,0.519047619048,0.553571428571
+0.85,0.15,425,,0.694117647059,0.619047619048,0.505882352941,0.535714285714
+0.86,0.14,430,,0.660465116279,0.636904761905,0.46511627907,0.505952380952
+0.87,0.13,435,,0.666666666667,0.630952380952,0.531034482759,0.440476190476
+0.88,0.12,440,,0.663636363636,0.630952380952,0.490909090909,0.434523809524
+0.89,0.11,445,,0.67191011236,0.630952380952,0.496629213483,0.517857142857
+0.9,0.1,450,,0.668888888889,0.630952380952,0.5,0.470238095238
+0.91,0.09,455,,0.663736263736,0.636904761905,0.507692307692,0.547619047619
+0.92,0.08,460,,0.684782608696,0.619047619048,0.49347826087,0.482142857143
+0.93,0.07,465,,0.666666666667,0.630952380952,0.464516129032,0.482142857143
+0.94,0.06,470,,0.676595744681,0.613095238095,0.497872340426,0.470238095238
+0.95,0.05,475,,0.671578947368,0.613095238095,0.492631578947,0.52380952381
+0.96,0.04,480,,0.685416666667,0.625,0.541666666667,0.428571428571
+0.97,0.03,485,,0.665979381443,0.619047619048,0.525773195876,0.529761904762
+0.98,0.02,490,,0.665306122449,0.630952380952,0.497959183673,0.529761904762

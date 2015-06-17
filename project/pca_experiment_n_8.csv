@@ -1,0 +1,573 @@
+Using all features
+below threshold:  319  above:  350
+training size:  20
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=7.79537002325, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 7.795370023251964} with a score of 0.65
+training size:  32
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=16.8393967972, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 16.83939679723241} with a score of 0.78
+training size:  45
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.2624799505, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.2624799505010251} with a score of 0.60
+training size:  57
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.49
+training size:  70
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=11.0631181627, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 11.06311816274127} with a score of 0.57
+training size:  82
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.09750918436, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.0975091843604738} with a score of 0.60
+training size:  95
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.79170005129, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.7917000512899384} with a score of 0.60
+training size:  107
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=8.96712164357, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 8.96712164356695} with a score of 0.67
+training size:  120
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.55757504199, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.557575041987364} with a score of 0.68
+training size:  132
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.09750918436, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.0975091843604738} with a score of 0.65
+training size:  145
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.4522480979, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.4522480979016332} with a score of 0.63
+training size:  157
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.09750918436, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.0975091843604738} with a score of 0.68
+training size:  170
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.68
+training size:  182
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.62
+training size:  195
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=2.72718302937, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 2.7271830293654746} with a score of 0.68
+training size:  207
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.09750918436, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.0975091843604738} with a score of 0.68
+training size:  220
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.65
+training size:  232
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=4.77506834353, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 4.775068343525361} with a score of 0.63
+training size:  245
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.55757504199, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.557575041987364} with a score of 0.62
+training size:  258
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=31.6227766017, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 31.622776601683793} with a score of 0.61
+training size:  270
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=10.315003692, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 10.315003692022668} with a score of 0.66
+training size:  283
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=8.36074346306, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 8.360743463060908} with a score of 0.66
+training size:  295
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.65
+training size:  308
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=3.87039332518, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 3.8703933251787537} with a score of 0.65
+training size:  320
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.2624799505, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.2624799505010251} with a score of 0.64
+training size:  333
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=4.45216681848, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 4.452166818484027} with a score of 0.64
+training size:  345
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=6.31847461329, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 6.318474613290674} with a score of 0.62
+training size:  358
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=7.26822848565, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 7.268228485648088} with a score of 0.61
+training size:  370
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=2.72718302937, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 2.7271830293654746} with a score of 0.64
+training size:  383
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.65
+training size:  395
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.2624799505, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.2624799505010251} with a score of 0.66
+training size:  408
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.02329299228, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.023292992280754} with a score of 0.65
+training size:  420
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.67054101495, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.670541014945963} with a score of 0.65
+training size:  433
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.55757504199, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.557575041987364} with a score of 0.64
+training size:  445
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=2.54276439996, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 2.5427643999561176} with a score of 0.66
+training size:  458
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=14.638959325, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 14.638959325032005} with a score of 0.63
+training size:  470
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=22.2822572395, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 22.28225723946148} with a score of 0.64
+training size:  483
+GridSearchCV(cv=5, error_score='raise',
+       estimator=Pipeline(steps=[('pca', PCA(copy=True, n_components=None, whiten=False)), ('svm', SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='linear', max_iter=-1, probability=False, random_state=None,
+  shrinking=True, tol=0.001, verbose=False))]),
+       fit_params={}, iid=True, loss_func=None, n_jobs=1,
+       param_grid={'pca__n_components': [8], 'svm__C': [1.023292992280754, 1.0975091843604738, 1.1771080412374353, 1.2624799505010251, 1.3540436133131244, 1.4522480979016332, 1.557575041987364, 1.670541014945963, 1.7917000512899384, 1.9216463678960964, 2.0610172783048557, 2.2104963183844415, 2.370816598689... 23.89831861751095, 25.631587796796904, 27.490565487043167, 29.484368927462643, 31.622776601683793]},
+       pre_dispatch='2*n_jobs', refit=True, score_func=None, scoring=None,
+       verbose=True)
+Fitting 5 folds for each of 50 candidates, totalling 250 fits
+best estimator:  Pipeline(steps=[('pca', PCA(copy=True, n_components=8, whiten=False)), ('svm', SVC(C=1.2624799505, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.0, kernel='linear', max_iter=-1, probability=False,
+  random_state=None, shrinking=True, tol=0.001, verbose=False))])
+The best parameters are {'pca__n_components': 8, 'svm__C': 1.2624799505010251} with a score of 0.64
+train_data_percent,test_data_percent,train_instance_count,,clf_train_acc,clf_test_acc,base_train_acc,base_test_acc
+0.04,0.96,20,,0.9,0.565476190476,0.65,0.434523809524
+0.065,0.935,32,,0.84375,0.553571428571,0.59375,0.529761904762
+0.09,0.91,45,,0.644444444444,0.440476190476,0.511111111111,0.488095238095
+0.115,0.885,57,,0.649122807018,0.589285714286,0.543859649123,0.52380952381
+0.14,0.86,70,,0.657142857143,0.571428571429,0.557142857143,0.541666666667
+0.165,0.835,82,,0.719512195122,0.625,0.646341463415,0.505952380952
+0.19,0.81,95,,0.694736842105,0.625,0.515789473684,0.470238095238
+0.215,0.785,107,,0.691588785047,0.613095238095,0.476635514019,0.494047619048
+0.24,0.76,120,,0.708333333333,0.613095238095,0.55,0.470238095238
+0.265,0.735,132,,0.704545454545,0.625,0.462121212121,0.464285714286
+0.29,0.71,145,,0.689655172414,0.619047619048,0.503448275862,0.535714285714
+0.315,0.685,157,,0.687898089172,0.619047619048,0.490445859873,0.482142857143
+0.34,0.66,170,,0.694117647059,0.625,0.517647058824,0.535714285714
+0.365,0.635,182,,0.675824175824,0.64880952381,0.494505494505,0.505952380952
+0.39,0.61,195,,0.712820512821,0.619047619048,0.45641025641,0.511904761905
+0.415,0.585,207,,0.690821256039,0.636904761905,0.536231884058,0.440476190476
+0.44,0.56,220,,0.654545454545,0.630952380952,0.5,0.458333333333
+0.465,0.535,232,,0.668103448276,0.642857142857,0.5,0.470238095238
+0.49,0.51,245,,0.677551020408,0.642857142857,0.473469387755,0.5
+0.515,0.485,258,,0.682170542636,0.630952380952,0.503875968992,0.482142857143
+0.54,0.46,270,,0.685185185185,0.630952380952,0.574074074074,0.589285714286
+0.565,0.435,283,,0.681978798587,0.654761904762,0.526501766784,0.535714285714
+0.59,0.41,295,,0.677966101695,0.660714285714,0.545762711864,0.464285714286
+0.615,0.385,308,,0.672077922078,0.654761904762,0.470779220779,0.511904761905
+0.64,0.36,320,,0.665625,0.654761904762,0.490625,0.541666666667
+0.665,0.335,333,,0.666666666667,0.625,0.492492492492,0.47619047619
+0.69,0.31,345,,0.678260869565,0.642857142857,0.51884057971,0.464285714286
+0.715,0.285,358,,0.667597765363,0.64880952381,0.491620111732,0.535714285714
+0.74,0.26,370,,0.672972972973,0.642857142857,0.489189189189,0.47619047619
+0.765,0.235,383,,0.650130548303,0.642857142857,0.501305483029,0.488095238095
+0.79,0.21,395,,0.650632911392,0.607142857143,0.483544303797,0.488095238095
+0.815,0.185,408,,0.674019607843,0.64880952381,0.485294117647,0.553571428571
+0.84,0.16,420,,0.67380952381,0.64880952381,0.497619047619,0.553571428571
+0.865,0.135,433,,0.665127020785,0.654761904762,0.505773672055,0.5
+0.89,0.11,445,,0.676404494382,0.64880952381,0.519101123596,0.470238095238
+0.915,0.085,458,,0.668122270742,0.636904761905,0.534934497817,0.505952380952
+0.94,0.06,470,,0.682978723404,0.64880952381,0.525531914894,0.410714285714
+0.965,0.035,483,,0.670807453416,0.654761904762,0.527950310559,0.440476190476

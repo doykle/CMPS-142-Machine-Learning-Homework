@@ -1,0 +1,188 @@
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>python processing.py --file goodtra
+in.csv --action train
+below threshold:  1423  above:  1460
+training size:  230
+Traceback (most recent call last):
+  File "processing.py", line 437, in <module>
+    classifier = svm_classification( instance_train, labels_train )
+  File "processing.py", line 363, in svm_classification
+    clf.fit(X, y)
+  File "C:\Python27\lib\site-packages\sklearn\grid_search.py", line 732, in fit
+    return self._fit(X, y, ParameterGrid(self.param_grid))
+  File "C:\Python27\lib\site-packages\sklearn\grid_search.py", line 505, in _fit
+    for parameters in parameter_iterable
+  File "C:\Python27\lib\site-packages\sklearn\externals\joblib\parallel.py", line 6
+59, in __call__
+    self.dispatch(function, args, kwargs)
+  File "C:\Python27\lib\site-packages\sklearn\externals\joblib\parallel.py", line 4
+06, in dispatch
+    job = ImmediateApply(func, args, kwargs)
+  File "C:\Python27\lib\site-packages\sklearn\externals\joblib\parallel.py", line 1
+40, in __init__
+    self.results = func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sklearn\cross_validation.py", line 1459, in _
+fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Python27\lib\site-packages\sklearn\svm\base.py", line 178, in fit
+    fit(X, y, sample_weight, solver_type, kernel, random_seed=seed)
+  File "C:\Python27\lib\site-packages\sklearn\svm\base.py", line 236, in _dense_fit
+
+    max_iter=self.max_iter, random_seed=random_seed)
+KeyboardInterrupt
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>python processing.py --file goodtra
+in.csv --action train
+below threshold:  1423  above:  1460
+training size:  144
+Traceback (most recent call last):
+  File "processing.py", line 437, in <module>
+    classifier = svm_classification( instance_train, labels_train )
+  File "processing.py", line 363, in svm_classification
+    clf.fit(X, y)
+  File "C:\Python27\lib\site-packages\sklearn\grid_search.py", line 732, in fit
+    return self._fit(X, y, ParameterGrid(self.param_grid))
+  File "C:\Python27\lib\site-packages\sklearn\grid_search.py", line 505, in _fit
+    for parameters in parameter_iterable
+  File "C:\Python27\lib\site-packages\sklearn\externals\joblib\parallel.py", line 6
+59, in __call__
+    self.dispatch(function, args, kwargs)
+  File "C:\Python27\lib\site-packages\sklearn\externals\joblib\parallel.py", line 4
+06, in dispatch
+    job = ImmediateApply(func, args, kwargs)
+  File "C:\Python27\lib\site-packages\sklearn\externals\joblib\parallel.py", line 1
+40, in __init__
+    self.results = func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sklearn\cross_validation.py", line 1459, in _
+fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Python27\lib\site-packages\sklearn\svm\base.py", line 178, in fit
+    fit(X, y, sample_weight, solver_type, kernel, random_seed=seed)
+  File "C:\Python27\lib\site-packages\sklearn\svm\base.py", line 236, in _dense_fit
+
+    max_iter=self.max_iter, random_seed=random_seed)
+KeyboardInterrupt
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>python processing.py --file goodtra
+in.csv --action train
+below threshold:  1423  above:  1460
+training size:  144
+The best parameters are {'C': 402.9611320200404, 'gamma': 0.04281332398719394} with
+ a score of 0.66
+Baseline:  0.508214676889
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.50      0.52      0.51      1343
+    class 2       0.52      0.50      0.51      1396
+
+avg / total       0.51      0.51      0.51      2739
+
+Confusion Matrix:
+ [[693 650]
+ [702 694]]
+
+
+
+Trained Classifier:  0.599488864549
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.58      0.64      0.61      1343
+    class 2       0.62      0.56      0.59      1396
+
+avg / total       0.60      0.60      0.60      2739
+
+Confusion Matrix:
+ [[856 487]
+ [610 786]]
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>python processing.py --file goodtra
+in.csv --action train
+below threshold:  1423  above:  1460
+training size:  144
+Fitting 5 folds for each of 400 candidates, totalling 2000 fits
+[Parallel(n_jobs=1)]: Done   1 jobs       | elapsed:    0.0s
+[Parallel(n_jobs=1)]: Done  50 jobs       | elapsed:    0.0s
+[Parallel(n_jobs=1)]: Done 200 jobs       | elapsed:    0.4s
+[Parallel(n_jobs=1)]: Done 450 jobs       | elapsed:    1.2s
+[Parallel(n_jobs=1)]: Done 800 jobs       | elapsed:    2.9s
+[Parallel(n_jobs=1)]: Done 1250 jobs       | elapsed:   15.3s
+[Parallel(n_jobs=1)]: Done 1800 jobs       | elapsed:   30.9s
+[Parallel(n_jobs=1)]: Done 2000 out of 2000 | elapsed:   37.1s finished
+The best parameters are {'C': 402.9611320200404, 'gamma': 0.01} with a score of 0.7
+2
+Baseline:  0.508214676889
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.52      0.51      0.51      1362
+    class 2       0.52      0.52      0.52      1377
+
+avg / total       0.52      0.52      0.52      2739
+
+Confusion Matrix:
+ [[699 663]
+ [658 719]]
+
+
+
+Trained Classifier:  0.620299379336
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.64      0.53      0.58      1362
+    class 2       0.60      0.71      0.65      1377
+
+avg / total       0.62      0.62      0.62      2739
+
+Confusion Matrix:
+ [[725 637]
+ [403 974]]
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>python processing.py --file goodtra
+in.csv --action train
+below threshold:  1423  above:  1460
+training size:  288
+Fitting 2 folds for each of 400 candidates, totalling 800 fits
+[Parallel(n_jobs=1)]: Done   1 jobs       | elapsed:    0.0s
+[Parallel(n_jobs=1)]: Done  50 jobs       | elapsed:    0.1s
+[Parallel(n_jobs=1)]: Done 200 jobs       | elapsed:    0.9s
+[Parallel(n_jobs=1)]: Done 450 jobs       | elapsed:   13.5s
+[Parallel(n_jobs=1)]: Done 800 jobs       | elapsed:   47.8s
+[Parallel(n_jobs=1)]: Done 800 out of 800 | elapsed:   47.8s finished
+The best parameters are {'C': 1.2589254117941673, 'gamma': 0.04281332398719394} wit
+h a score of 0.62
+Baseline:  0.492870905588
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.50      0.51      0.50      1286
+    class 2       0.51      0.50      0.50      1309
+
+avg / total       0.50      0.50      0.50      2595
+
+Confusion Matrix:
+ [[653 633]
+ [658 651]]
+
+
+
+Trained Classifier:  0.576493256262
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.58      0.51      0.55      1286
+    class 2       0.57      0.64      0.60      1309
+
+avg / total       0.58      0.58      0.57      2595
+
+Confusion Matrix:
+ [[662 624]
+ [475 834]]
+
+C:\Users\Kevin\Documents\GitHub\CMPS142\project>
+
+

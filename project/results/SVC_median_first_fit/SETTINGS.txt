@@ -1,0 +1,7 @@
+   clf = SVC(kernel='rbf', C=22.252, gamma=0.007848)
+   
+   train on 50%, test on 50%
+
+exclude instances with nan GPA
+
+fill in nan values with median score

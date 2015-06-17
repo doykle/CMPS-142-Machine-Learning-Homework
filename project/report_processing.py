@@ -181,62 +181,11 @@ def data_organizer( instances, outcomes ):
    
    # Scale to [0,1]
    scaler = MinMaxScaler( feature_range=(0,1), copy=False)
-   scaler.fit( instances )
    instances = scaler.fit_transform(instances)
 
-   return instances, outcomes, scaler
+   return instances, outcomes
    
-   
-def test_data_organizer( instances, scaler ):
-   """
-   Operations to organize data as desired
-   """
-   
-   excluded_features = set([])
-   #print( "Using only SAT subject tests" )
-   #included_features = set(["SATCRDG",	"SATMATH",	"SATWRTG"])
-   
-   #print( "Using SAT total and HSGPA" )
-   #included_features = set(["SATTotal",	"HSGPA"])
-   
-   #print( "Using gender, firstgen, famincome, firstlang" )
-   #included_features = set(["gender", "Firgen", "famincome", "FirstLang"])
-   
-   print( "Using all features" )
-   included_features = set(["gender", "Firgen", "famincome",	"SATCRDG",	"SATMATH",	"SATWRTG",	"SATTotal",	"HSGPA",	"ACTRead",	"ACTMath",	"ACTEngWrit",	"APIScore",	"FirstLang",	"HSGPAunweighted"])
-
-   #print( "SAT subject tests and HSGPA" )
-   #included_features = set(["SATCRDG",	"SATMATH",	"SATWRTG", "HSGPA" ])
-
-
-   # Remove instances without GPA data
-   new_instances = []
-   for instance in instances:
-      temp={}
-      for name,val in zip(ALL_LABELS, instance):
-         temp[name] = val
-      temp_list = []
-      for key in temp.keys():
-         if key in included_features:
-            temp_list.append( temp[key] )
-      new_instances.append( temp_list )
-         
-         
-   instances = new_instances
-   
-   # Fill in NaN values with median
-   instance_list = []
-   for idx,instance in enumerate(instances):
-      instance_list.append( [ value for value in instance ] ) 
-   bandaid = Imputer( strategy='median' )
-   instances = bandaid.fit_transform( instance_list )
-   
-   # Scale to [0,1]
-   instances = scaler.fit_transform(instances)
-
-   return instances
-   
-   
+  
 def visualize( km, n_clusters, X, y ):
  
    fig = plt.figure()
@@ -446,45 +395,31 @@ def svm_regression( instances, labels ):
 def svm_classification( instances, labels ):
    """
    SVM Classification
-   
-   for PCA pipeline
-   http://scikit-learn.org/stable/auto_examples/plot_digits_pipe.html#example-plot-digits-pipe-py
    """
    X = np.array(instances)
    y = np.array(labels)
 
-   print( "training size: ", len(instances) )
+   #print( "training size: ", len(instances) )
    
    #param_grid = [
    #   {'C': [.1, 1, 5, 10, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 1000], 
    #    'gamma': [0.0001, 0.005, 0.001, 0.05, 0.01, 0.02, 0.04, 0.05, 0.07, 0.09, 0.095, 0.1, 0.13, 0.16, 0.19, 0.3, 0.6, 1], 'kernel': ['rbf'] }
    #  ]
-   #svm = SVC(kernel='linear')
-   #pca = decomposition.PCA()
-   #pipe = Pipeline(steps=[('pca',pca),('svm',svm)])
    
-   #pca.fit(X)
-   
-   #pca_components = np.logspace(1, 3, 2).tolist()
-   #pca_components = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-   
-   #C_vals = np.logspace(0.01, 6, 20).tolist()
+   #C_vals = np.logspace(0.1, 6, 20).tolist()
    #g_vals = np.logspace(-5, 5, 20).tolist()
-   #param_dict = dict( svm__C=C_vals, pca__n_components=pca_components )
+   #param_dict = dict( C=C_vals, gamma=g_vals )
    
    #clf = GridSearchCV(SVC(C=1), param_dict, cv=5, verbose=True)
    
-   #print( clf )
-
    clf = SVC(kernel='rbf', C=22.252, gamma=0.007848)
-   #clf = SVC(kernel='linear', C=489185, gamma=0.001281)
+   #clf = SVC(kernel='rbf', C=489185, gamma=0.001281)
    #clf = SVC(kernel='rbf', C=10.75422, gamma=6.15848)
   
+   # This came from a graph search on 50% of the training data
+   #clf = SVC(kernel='rbf', C=239302.57, gamma=0.0042813)
+  
    clf.fit(X, y)
-     
-   #print( "best estimator: ", clf.best_estimator_ )
-   
-   #print( "grid scores: ", clf.grid_scores_ )
      
    #print("The best parameters are %s with a score of %0.2f"
    #   % (clf.best_params_, clf.best_score_))
@@ -494,7 +429,7 @@ def svm_classification( instances, labels ):
    
 def knn_classification( instances, labels ):
 
-   knn = KNeighborsClassifier(n_neighbors=10)
+   knn = KNeighborsClassifier(n_neighbors=9)
    clf = knn.fit(instances, labels)
    
    return clf
@@ -507,27 +442,31 @@ def evaluate( clf, dumb_clf, instances, labels ):
    target_names = ['class 1', 'class 2', 'class 3', 'class 4', 'class 5', 'class 6']
 
    baseline = dumb_clf.score( instances, labels )
-   print( "Baseline: ", baseline )
-   prediction_array = dumb_clf.predict( instances )
-   conf_mat = confusion_matrix( labels, prediction_array )
-   class_report = classification_report( labels, prediction_array,\
-                     target_names=target_names)
+   #print( "Baseline: ", baseline )
+   #prediction_array = dumb_clf.predict( instances )
+   #conf_mat = confusion_matrix( labels, prediction_array )
+   #class_report = classification_report( labels, prediction_array,\
+   #                  target_names=target_names)
                      
-   print( "Classification report:\n", class_report )
+   #print( "Classification report:\n", class_report )
    
-   print( "Confusion Matrix:\n", conf_mat )   
+   #print( "Confusion Matrix:\n", conf_mat )   
    
-   print( "\n\n" )
+   #print( "\n\n" )
    
-   print( "Trained Classifier: ", clf.score(instances, labels) )
-   prediction_array = clf.predict( instances )
-   conf_mat = confusion_matrix( labels, prediction_array )
-   class_report = classification_report( labels, prediction_array,\
-                     target_names=target_names)
+   class_score = clf.score(instances, labels)
+   
+   #print( "Trained Classifier: ", clf.score(instances, labels) )
+   #prediction_array = clf.predict( instances )
+   #conf_mat = confusion_matrix( labels, prediction_array )
+   #class_report = classification_report( labels, prediction_array,\
+   #                  target_names=target_names)
                      
-   print( "Classification report:\n", class_report )
+   #print( "Classification report:\n", class_report )
    
-   print( "Confusion Matrix:\n", conf_mat )
+   #print( "Confusion Matrix:\n", conf_mat )
+   
+   return (class_score, baseline)
    
    
 def test_classifier( clf, instances ):
@@ -562,49 +501,61 @@ if __name__ == '__main__':
       #pdb.set_trace()
       
       # Organize the data
-      instances, outcomes, scaler = data_organizer( instances, outcomes )
+      instances, outcomes = data_organizer( instances, outcomes )
 
       assert len(instances) == len(outcomes)
       
       # Generate labels array from the outcome data
       #labels = generate_labels( outcomes )
       labels = split_at_two( outcomes )
+      size_of_test_set = 0.25
+      instance_train_set, instance_test_set, labels_train_set, labels_test_set =\
+            train_test_split( instances, labels, test_size = size_of_test_set, random_state=5 )
       
       
+      print( "train_data_percent,test_data_percent,train_instance_count,,clf_train_acc,clf_test_acc,base_train_acc,base_test_acc" )
       # Split data into training and dev sets
-      size_of_test_set = 0.10
-      instance_train, instance_test, labels_train, labels_test =\
-         train_test_split( instances, labels, test_size = size_of_test_set, random_state=5 )
-      
-      assert len(instance_train) == len(labels_train) and len(instance_test) == len(labels_test)
-      
-      # Classify the training set
-      #classifier = NBclassify( instance_train, labels_train )
-      #classifier = knn_classification( instance_train, labels_train )
-      #classifier = logistic_regression( instance_train, labels_train )
-      #classifier = svm_regression( instance_train, labels_train )
-      classifier = svm_classification( instance_train, labels_train )
-      
-      
-      
-      # Baseline
-      baseline = DummyClassifier( strategy='uniform' )
-      dumb_clf = baseline.fit( instance_train, labels_train )
+      for num in xrange(20, 400, 5):
+         size_of_test_set = 1-num*0.001
+         #print( "Percent split: train--{0} test--{1}".format( 1-size_of_test_set, size_of_test_set ) )
+         instance_train, instance_test, labels_train, labels_test =\
+            train_test_split( instance_train_set, labels_train_set, test_size = size_of_test_set, random_state=5 )
+         
+         #print( len(instance_train), len(labels_train), len(instance_test), len(labels_test) )
+         assert len(instance_train) == len(labels_train) and len(instance_test) == len(labels_test)
+         
+         # Classify the training set
+         #classifier = NBclassify( instance_train, labels_train )
+         #classifier = knn_classification( instance_train, labels_train )
+         #classifier = logistic_regression( instance_train, labels_train )
+         #classifier = svm_regression( instance_train, labels_train )
+         classifier = svm_classification( instance_train, labels_train )
+         
+         
+         
+         # Baseline
+         baseline = DummyClassifier( strategy='uniform' )
+         dumb_clf = baseline.fit( instance_train, labels_train )
 
-      # Evaluate the classification
-      print( "TRAINING EVAL" )
-      evaluate( classifier, dumb_clf, instance_train, labels_train)
-      print( "TEST EVAL" )
-      evaluate( classifier, dumb_clf, instance_test, labels_test )
-      
+         # Evaluate the classification
+         #print( "TRAINING EVAL" )
+         clf_train_eval, base_train_eval = evaluate( classifier, dumb_clf, instance_train, labels_train)
+         #print( "TEST EVAL" )
+         clf_test_eval, base_test_eval = evaluate( classifier, dumb_clf, instance_test_set, labels_test_set )
+         #print( "\n\n" )
+         
+         print( 1-size_of_test_set, size_of_test_set, len(instance_train),'', clf_train_eval, clf_test_eval, base_train_eval, base_test_eval, sep=',' )
+         
+         
+         
       # Get the full data set, instances, and outcomes.
-      subject_nums, instances = get_test_data( 'goodtestNoLabels.csv' )
+      #subject_nums, instances = get_test_data( 'goodtestNoLabels.csv' )
 
       # Organize the data
-      instances = test_data_organizer( instances, scaler )
+      #instances = test_data_organizer( instances )
       
       # Get the predictions list
-      predictions = test_classifier( classifier, instances )
+      #predictions = test_classifier( classifier, instances )
       
       #for num,pred in zip(subject_nums, predictions):
       #   print( int(num[0]), pred, sep=',')

@@ -1,0 +1,59 @@
+Using all features
+below threshold:  1423  above:  1460
+training size:  1441
+TRAINING EVAL
+Baseline:  0.492713393477
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.48      0.50      0.49       701
+    class 2       0.51      0.49      0.50       740
+
+avg / total       0.49      0.49      0.49      1441
+
+Confusion Matrix:
+ [[347 354]
+ [375 365]]
+
+
+
+Trained Classifier:  0.621096460791
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.63      0.55      0.59       701
+    class 2       0.62      0.69      0.65       740
+
+avg / total       0.62      0.62      0.62      1441
+
+Confusion Matrix:
+ [[385 316]
+ [230 510]]
+TEST EVAL
+Baseline:  0.50693481276
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.51      0.51      0.51       722
+    class 2       0.51      0.51      0.51       720
+
+avg / total       0.51      0.51      0.51      1442
+
+Confusion Matrix:
+ [[367 355]
+ [355 365]]
+
+
+
+Trained Classifier:  0.633148404993
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.65      0.57      0.61       722
+    class 2       0.62      0.70      0.66       720
+
+avg / total       0.64      0.63      0.63      1442
+
+Confusion Matrix:
+ [[410 312]
+ [217 503]]

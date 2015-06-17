@@ -1,0 +1,23 @@
+RBF kernel
+Linear kernel
+finished SVM training
+Baseline:  0.268208092486
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.05      0.26      0.08        42
+    class 2       0.19      0.24      0.21       162
+    class 3       0.39      0.24      0.30       326
+    class 4       0.35      0.22      0.27       335
+
+avg / total       0.32      0.23      0.26       865
+
+Confusion Matrix:
+ [[11  8  8 15]
+ [50 39 33 40]
+ [84 79 78 85]
+ [95 83 83 74]]
+
+
+
+Trained Classifier:  0.102144352039

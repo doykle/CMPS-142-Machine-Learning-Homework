@@ -1,0 +1,59 @@
+Using only SAT subject tests
+below threshold:  1423  above:  1460
+training size:  1441
+TRAINING EVAL
+Baseline:  0.517696044414
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.49      0.50      0.49       711
+    class 2       0.50      0.49      0.49       730
+
+avg / total       0.49      0.49      0.49      1441
+
+Confusion Matrix:
+ [[354 357]
+ [375 355]]
+
+
+
+Trained Classifier:  0.573213046495
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.59      0.44      0.51       711
+    class 2       0.56      0.70      0.62       730
+
+avg / total       0.58      0.57      0.57      1441
+
+Confusion Matrix:
+ [[316 395]
+ [220 510]]
+TEST EVAL
+Baseline:  0.51040221914
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.48      0.49      0.49       712
+    class 2       0.49      0.49      0.49       730
+
+avg / total       0.49      0.49      0.49      1442
+
+Confusion Matrix:
+ [[348 364]
+ [375 355]]
+
+
+
+Trained Classifier:  0.612343966713
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.64      0.49      0.56       712
+    class 2       0.60      0.73      0.66       730
+
+avg / total       0.62      0.61      0.61      1442
+
+Confusion Matrix:
+ [[351 361]
+ [198 532]]

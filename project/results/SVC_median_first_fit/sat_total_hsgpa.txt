@@ -1,0 +1,59 @@
+Using SAT total and HSGPA
+below threshold:  1423  above:  1460
+training size:  1441
+TRAINING EVAL
+Baseline:  0.503816793893
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.51      0.49      0.50       724
+    class 2       0.50      0.51      0.51       717
+
+avg / total       0.50      0.50      0.50      1441
+
+Confusion Matrix:
+ [[357 367]
+ [349 368]]
+
+
+
+Trained Classifier:  0.614156835531
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.64      0.54      0.58       724
+    class 2       0.60      0.69      0.64       717
+
+avg / total       0.62      0.61      0.61      1441
+
+Confusion Matrix:
+ [[390 334]
+ [222 495]]
+TEST EVAL
+Baseline:  0.483356449376
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.50      0.52      0.51       699
+    class 2       0.54      0.52      0.53       743
+
+avg / total       0.52      0.52      0.52      1442
+
+Confusion Matrix:
+ [[366 333]
+ [359 384]]
+
+
+
+Trained Classifier:  0.620665742025
+Classification report:
+              precision    recall  f1-score   support
+
+    class 1       0.62      0.57      0.59       699
+    class 2       0.62      0.67      0.65       743
+
+avg / total       0.62      0.62      0.62      1442
+
+Confusion Matrix:
+ [[396 303]
+ [244 499]]
